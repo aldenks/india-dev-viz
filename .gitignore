@@ -1,3 +1,4 @@
 MapThing/
 *.swp
 *.swo
+.DS_Store
