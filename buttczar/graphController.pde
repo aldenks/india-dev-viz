@@ -18,7 +18,7 @@ class GraphController {
 
     districts = new DistrictCollection(filename);
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames);
-    graph = new Graph(100, 100, 800, 400); 
+    graph = new Graph(50, 75, 650, 650); 
   }
 
   public void draw() {

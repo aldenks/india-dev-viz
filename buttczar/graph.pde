@@ -10,11 +10,7 @@ class Graph {
   
   //take in 2d string array 
   
-<<<<<<< HEAD
-  public Graph(float _x, float _y, float _h, float _w) {
-=======
   public Graph(float _x, float _y, float _w, float _h) {
->>>>>>> 54958501ee1de9d38220b04c25ad3bd37141d6d7
     axis_w = 70;
     max_radius = 25;
     min_radius = 5;
@@ -56,6 +52,9 @@ class Graph {
     }
     
     // CIRCLES
+    noFill();
+    strokeWeight(2);
+    stroke(0, 0, 0, 150);
     xlocs = xLocations();
     ylocs = yLocations();
     zrad = zradii();
@@ -63,6 +62,8 @@ class Graph {
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
     }
+    strokeWeight(1);
+    stroke(0);
   }
   
   void setVariables (String[][] data) {

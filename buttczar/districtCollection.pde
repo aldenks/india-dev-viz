@@ -89,7 +89,7 @@ class DistrictCollection {
       District d = (District)x.getValue();
       columns[1][i] = d.data[var1];
       columns[2][i] = d.data[var2];
-      columns[3][i] = d.data[var2];
+      columns[3][i] = d.data[var3];
       i++;
     }
     return columns;

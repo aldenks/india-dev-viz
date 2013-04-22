@@ -5,7 +5,7 @@ GraphController gController;
 ControlP5 cp5;
 
 void setup() {
-  size(1000, 500);
+  size(800, 800);
   cp5 = new ControlP5(this);
   gController = new GraphController(INPUT_FILENAME, cp5);
 }
