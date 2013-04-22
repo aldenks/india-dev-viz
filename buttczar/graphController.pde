@@ -26,11 +26,8 @@ class GraphController {
 
   public void render() {
     int[] selectedVars      = gui.varsSelected();
-<<<<<<< HEAD
     String[][] selectedData = districts.getColumns(selectedVars[0],selectedVars[1]);
-=======
     //String[][] selectedData = data.getColumns(selectedVars[0],selectedVars[1]);
->>>>>>> f5f97100f8de35f1fee19e8ad90a1c5c57e5ee55
 
     //graph.displayData(selectedData);
     gui.render(0, 0, width, SELECTION_GUI_HEIGHT);
