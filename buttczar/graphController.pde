@@ -23,7 +23,7 @@ class GraphController {
     dropdowns = new DropdownSelectGroup(cp5, column_names);
   }
 
-  public void render() {
+  public void draw() {
     int x_column_idx = dropdowns.selectedXIndex();
     int y_column_idx = dropdowns.selectedYIndex();
     int z_column_idx = dropdowns.selectedZIndex();

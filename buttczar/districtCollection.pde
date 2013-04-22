@@ -17,6 +17,7 @@ class DistrictCollection {
     for (int i = 0; i < lines.length; i++) {
       if (i == 0) {
         indexToVarName = split(lines[i], ',');
+        indexToVarName = subset(indexToVarName, 2);
         varNameToIndex = new HashMap<String,Integer>
           (indexToVarName.length);
         for (int v = 0; v < indexToVarName.length; v++) {
@@ -32,7 +33,7 @@ class DistrictCollection {
     for (int i = 0; i < values.length; i++) {
       name = values[i][0];
       if (!districts.containsKey(name)) {
-        District d = new District(varNameToIndex, values[i]);
+        District d = new District(varNameToIndex, subset(values[i], 2));
         districts.put(name, d);
       }
     }
