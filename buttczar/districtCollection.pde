@@ -65,4 +65,24 @@ class DistrictCollection {
     return columns;
   }
 
+  // overloaded version of previous function to handle 3 dimensions
+  public String[][] getColumns(int var1, int var2, int var3) {
+    String columns[][] = new String[4][districts.size()+1];
+    columns[0][0] = "Name";
+    columns[1][0] = indexToVarName[var1];
+    columns[2][0] = indexToVarName[var2];
+    columns[3][0] = indexToVarName[var3];
+    Iterator iter = districts.entrySet().iterator();
+    int i = 1;
+    while (iter.hasNext()) {
+      Map.Entry x = (Map.Entry)iter.next();
+      columns[0][i] = (String)x.getKey();
+      District d = (District)x.getValue();
+      columns[1][i] = d.data[var1];
+      columns[2][i] = d.data[var2];
+      columns[3][i] = d.data[var2];
+      i++;
+    }
+    return columns;
+  }
 }

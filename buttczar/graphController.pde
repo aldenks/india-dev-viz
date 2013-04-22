@@ -32,7 +32,6 @@ class GraphController {
 
     //graph.displayData(selectedData);
     dropdowns.draw(0, 0, width, SELECTION_GUI_HEIGHT);
-
   }
 
   // ControlP5 event handler, delegates events to interested objects
