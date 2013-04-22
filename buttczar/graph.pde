@@ -1,31 +1,23 @@
 class Graph { 
   float[] xs;
   float[] ys;
+  float[] zs;
   String lx, ly;
-  float xmax, ymax;
+  float xmax, ymax, zmax;
   float axis_w;
   float x,y,h,w;
   float plotx, ploty, ploth, plotw;
+  float max_radius, min_radius;
   
   //take in 2d string array 
   
   public Graph(String[][] data, float _x, float _y, float _h, float _w) {
     axis_w = 70;
-    xs = new float [data[1].length-1];
-    ys = new float [data[1].length-1];
-    for (int i=0; i<data[1].length-1; i++) { 
-      xs[i] = float(data[1][1+i]);
-      ys[i] = float(data[2][1+i]);
-    }
-    lx = data[1][0]; ly = data[2][0];
+    max_radius = 25;
+    min_radius = 5;
     x = _x; y = _y; h = _h; w = _w;
     plotx = x+axis_w; ploty = y;
     ploth = h-axis_w; plotw = w-axis_w;
-    xmax = 0; ymax = 0;
-    for (int i = 0; i < xs.length; i++) {
-      if (xs[i] > xmax) xmax = xs[i];
-      if (ys[i] > ymax) ymax = ys[i];
-    }
   }
   
   void draw() {
@@ -61,6 +53,24 @@ class Graph {
     } 
   }
   
+  void setVariables (String[][] data) {
+    xs = new float [data[1].length-1];
+    ys = new float [data[1].length-1];
+    zs = new float [data[1].length-1];
+    for (int i=0; i<data[1].length-1; i++) { 
+      xs[i] = float(data[1][1+i]);
+      ys[i] = float(data[2][1+i]);
+      zs[i] = float(data[3][1+i]);
+    }
+    lx = data[1][0]; ly = data[2][0];
+    xmax = 0; ymax = 0; zmax = 0;
+    for (int i = 0; i < xs.length; i++) {
+      if (xs[i] > xmax) xmax = xs[i];
+      if (ys[i] > ymax) ymax = ys[i];
+      if (zs[i] > zmax) zmax = zs[i];
+    }
+  }
+  
   void setWidthHeight(float _w, float _h) {
     h = _h; w = _w;
     ploth = h-axis_w; plotw = w-axis_w;
@@ -76,11 +86,22 @@ class Graph {
   }
   
   float[] yLocations() {
-    float[] locs = new float[xs.length];
+    float[] locs = new float[ys.length];
     float xaxis = y + ploth;
     for (int i = 0; i < locs.length; i++) {
       locs[i] = xaxis - (ploth*(ys[i]/ymax));
     }
     return locs;
+  }
+  
+  float[] zradii() {
+    float [] radii = new float[zs.length];    
+    for (int i = 0; i < radii.length; i++) {
+      radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
+      if (radii[i] < min_radius) {
+        radii[i] = min_radius;
+      }
+    }
+    return radii;
   }
 }
