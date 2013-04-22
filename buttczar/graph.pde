@@ -1,7 +1,6 @@
 class Graph { 
-  float[] xs;
-  float[] ys;
-  float[] zs;
+  float[] xs, ys, zs;
+  float[] xlocs, ylocs, zrad;
   String lx, ly;
   float xmax, ymax, zmax;
   float axis_w;
@@ -11,7 +10,7 @@ class Graph {
   
   //take in 2d string array 
   
-  public Graph(String[][] data, float _x, float _y, float _h, float _w) {
+  public Graph(float _x, float _y, float _h, float _w) {
     axis_w = 70;
     max_radius = 25;
     min_radius = 5;
@@ -50,13 +49,25 @@ class Graph {
     for (int i = 0; i <= num_y_labels; i++) {
        text(i*u, x_loc, ploty+ploth+(axis_w/2.0));
        x_loc += x_label_dist;
-    } 
+    }
+    
+    // CIRCLES
+    xlocs = xLocations();
+    ylocs = yLocations();
+    zrad = zradii();
+    ellipseMode(RADIUS);
+    for (int i = 0; i < xlocs.length; i++) {
+      ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
+    }
   }
   
   void setVariables (String[][] data) {
     xs = new float [data[1].length-1];
     ys = new float [data[1].length-1];
     zs = new float [data[1].length-1];
+    xlocs = new float [data[1].length-1];
+    ylocs = new float [data[1].length-1];
+    zrad = new float [data[1].length-1];
     for (int i=0; i<data[1].length-1; i++) { 
       xs[i] = float(data[1][1+i]);
       ys[i] = float(data[2][1+i]);
