@@ -7,6 +7,13 @@ class DistrictCollection {
   HashMap<String, District> districts;
   String indexToVarName[];
   String values[][];
+  public final String variableNames[] = {"Opencast Coal Output", 
+    "Below Ground Coal Output", "Total Area", "Total Population", 
+    "Male Population", "Female Population", "Total Literates", 
+    "Male Literates", "Female Literates", "Total Workers", "Male Workers", 
+    "Female Workers", "Total Cultivators", "Total Agricultural Laborers", 
+    "Total Non-workers", "Rural Total Population", "Rural Total Literates", 
+    "Urban Total Population", "Urban Total Literates"};
 
   public DistrictCollection(String filename) {
     districts = new HashMap(650);
@@ -33,7 +40,8 @@ class DistrictCollection {
     for (int i = 0; i < values.length; i++) {
       name = values[i][0];
       if (!districts.containsKey(name)) {
-        District d = new District(varNameToIndex, subset(values[i], 2));
+        District d = new District(varNameToIndex, subset(values[i], 2), 
+                                  values[i][0], values[i][1]);
         districts.put(name, d);
       }
     }

@@ -10,7 +10,11 @@ class Graph {
   
   //take in 2d string array 
   
+<<<<<<< HEAD
   public Graph(float _x, float _y, float _h, float _w) {
+=======
+  public Graph(float _x, float _y, float _w, float _h) {
+>>>>>>> 54958501ee1de9d38220b04c25ad3bd37141d6d7
     axis_w = 70;
     max_radius = 25;
     min_radius = 5;
