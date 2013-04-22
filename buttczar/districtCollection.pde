@@ -1,14 +1,14 @@
 import java.util.Iterator;
 import java.util.Map;
 
-class DistrictData {
+class DistrictCollection {
 
   HashMap<String, Integer> varNameToIndex;
   HashMap<String, District> districts;
   String indexToVarName[];
   String values[][];
 
-  public DistrictData(String filename) {
+  public DistrictCollection(String filename) {
     districts = new HashMap(650);
     String name;
 

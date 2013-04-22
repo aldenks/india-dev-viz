@@ -1,11 +1,11 @@
 class GraphController {
 
-  DistrictData data;
+  DistrictCollection districts;
   //Graph graph;
   selectionGUI gui;
 
   public GraphController(String filename){
-    data = new DistrictData(filename);
+    districts = new DistrictCollection(filename);
     gui  = new selectionGUI();
   }
 
