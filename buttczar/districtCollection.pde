@@ -8,7 +8,6 @@ class DistrictData {
   String indexToVarName[];
   String values[][];
 
-  // filename is a csv of data
   public DistrictData(String filename) {
     districts = new HashMap(650);
     String name;
@@ -43,10 +42,11 @@ class DistrictData {
     return districts.get(name);
   }
 
-  public float getDistrictValue(String name, String feature) {
-    return (districts.get(name)).getVariable(feature);
+  public float getValueForDistrict(String districtName, String variable) {
+    return (districts.get(districtName)).getVariable(variable);
   }
 
+  // returns 3 x numDists 2D array, 1 row for names, 1 for var1, 1 for var2  
   public String[][] getColumns(int var1, int var2) {
     String columns[][] = new String[3][districts.size()+1];
     columns[0][0] = "Name";
