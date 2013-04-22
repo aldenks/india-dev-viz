@@ -5,10 +5,12 @@ DistrictData districts;
 
 // graphical objects
 ControlP5 cp5;
+GraphController gController;
 DropdownSelectGroup column_selects;
 
-// layout sizes
+// constants
 final float SELECTS_HEIGHT = 50;
+final String input_filename = "../data/districtsSelectVariables.csv";
 
 void setup() {
     size(1000, 500);
@@ -23,6 +25,7 @@ void setup() {
     String[] column_names = { "Hello", "This is a longer name asklj sakl",
                               "what's up", "yo", "derp", "herp", "blerp" };
     column_selects = new DropdownSelectGroup(cp5, column_names);
+    gController = new GraphController(input_filename);
 }
 
 void draw() {
@@ -32,6 +35,7 @@ void draw() {
     int x_column_idx = column_selects.selectedXIndex();
     int y_column_idx = column_selects.selectedYIndex();
     int z_column_idx = column_selects.selectedZIndex();
+    gController.render();
 }
 
 // ControlP5 event handler, delegates events to interested objects
@@ -42,4 +46,3 @@ void controlEvent(ControlEvent e) {
   else if (e.isController()) {
   }
 }
-
