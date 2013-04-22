@@ -27,11 +27,8 @@ class GraphController {
   public void render() {
     int[] selectedVars      = gui.varsSelected();
     String[][] selectedData = districts.getColumns(selectedVars[0],selectedVars[1]);
-    //String[][] selectedData = data.getColumns(selectedVars[0],selectedVars[1]);
-
     //graph.displayData(selectedData);
     gui.render(0, 0, width, SELECTION_GUI_HEIGHT);
-
   }
 
   // ControlP5 event handler, delegates events to interested objects
