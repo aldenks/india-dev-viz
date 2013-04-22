@@ -13,6 +13,8 @@ class GraphController {
     int[] selectedVars      = gui.varsSelected();
     String[][] selectedData = data.getColumns(selectedVars[0],selectedVars[1]);
 
+    graph.displayData(selectedData);
+
   }
 
 }
