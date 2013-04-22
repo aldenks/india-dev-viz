@@ -5,11 +5,10 @@ class GraphController {
   DistrictCollection districts;
   //Graph graph;
   ControlP5 cp5;
-  selectionGUI gui;
+  DropdownSelectGroup dropdowns;
 
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
-
 
   public GraphController(String filename, ControlP5 _cp5){
     cp5 = _cp5;
@@ -21,22 +20,24 @@ class GraphController {
     // TODO pass in real names
     String[] column_names = { "Hello", "This is a longer name asklj sakl",
                               "what's up", "yo", "derp", "herp", "blerp" };
-    gui = new selectionGUI(cp5, column_names);
+    dropdowns = new DropdownSelectGroup(cp5, column_names);
   }
 
   public void render() {
-    int[] selectedVars      = gui.varsSelected();
-    String[][] selectedData = districts.getColumns(selectedVars[0],selectedVars[1]);
+    int x_column_idx = dropdowns.selectedXIndex();
+    int y_column_idx = dropdowns.selectedYIndex();
+    int z_column_idx = dropdowns.selectedZIndex();
+    String[][] selectedData = districts.getColumns(x_column_idx,y_column_idx);
     //String[][] selectedData = data.getColumns(selectedVars[0],selectedVars[1]);
 
     //graph.displayData(selectedData);
-    gui.render(0, 0, width, SELECTION_GUI_HEIGHT);
+    dropdowns.draw(0, 0, width, SELECTION_GUI_HEIGHT);
 
   }
 
   // ControlP5 event handler, delegates events to interested objects
   public void controlEvent(ControlEvent e) {
-    gui.controlEvent(e);
+    dropdowns.controlEvent(e);
   }
 
 }
