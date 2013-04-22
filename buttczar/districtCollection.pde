@@ -1,6 +1,7 @@
 class DistrictData {
-    HashMap<String, Integer> variables;
+    HashMap<String, Integer> varNameToIndex;
     HashMap<String, District> districts;  
+    String indexToVarName[]; 
 
     // filename is a csv of data
     public DistrictData(String filename) {
@@ -11,10 +12,10 @@ class DistrictData {
         String values[][]  = new String[lines.length-1][];
         for (int i = 0; i < lines.length; i++) {
             if (i == 0) {
-                String titles[] = split(lines[i], ',');
-                variables = new HashMap<String,Integer> (titles.length);
-                for (int v = 0; v < titles.length; v++) {
-                    variables.put(titles[v], v);
+                indexToVarName = split(lines[i], ',');
+                varNameToIndex = new HashMap<String,Integer> (indexToVarName.length);
+                for (int v = 0; v < indexToVarName.length; v++) {
+                    varNameToIndex.put(indexToVarName[v], v);
                 }
             }
             else {
@@ -25,7 +26,7 @@ class DistrictData {
         for (int i = 0; i < values.length; i++) {
             name = values[i][1];  
             if (!districts.containsKey(name)) {
-                District d = new District(variables, values[i]);
+                District d = new District(varNameToIndex, values[i]);
                 districts.put(name, d);
             }
         }
