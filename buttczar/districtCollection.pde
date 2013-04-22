@@ -24,7 +24,7 @@ class DistrictData {
         }
 
         for (int i = 0; i < values.length; i++) {
-            name = values[i][1];  
+            name = values[i][0];  
             if (!districts.containsKey(name)) {
                 District d = new District(varNameToIndex, values[i]);
                 districts.put(name, d);
