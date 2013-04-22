@@ -1,15 +1,13 @@
-DistrictData districts;
+GraphController gController;
+
+final String input_filename = "../data/districtsSelectVariables.csv";
 
 void setup() {
-    size(500, 500);
-    districts = new DistrictData("../data/districtsSelectVariables.csv");
-    District d = districts.getDistrict("Baramula");
-    for (int i = 0; i < d.data.length; i++) {
-        println(d.data[i]);
-    }
+  gController = new GraphController(input_filename);
+
 }
 
 void draw() {
-
+  gController.render();
 }
 
