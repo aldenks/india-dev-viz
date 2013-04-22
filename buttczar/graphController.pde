@@ -3,7 +3,7 @@ import controlP5.*;
 class GraphController {
 
   DistrictCollection districts;
-  //Graph graph;
+  Graph graph;
   ControlP5 cp5;
   DropdownSelectGroup dropdowns;
 
@@ -17,20 +17,18 @@ class GraphController {
     cp5.setControlFont(cp5font);
 
     districts = new DistrictCollection(filename);
-    // TODO pass in real names
-    String[] column_names = { "Hello", "This is a longer name asklj sakl",
-                              "what's up", "yo", "derp", "herp", "blerp" };
-    dropdowns = new DropdownSelectGroup(cp5, column_names);
+    dropdowns = new DropdownSelectGroup(cp5, districts.variableNames);
+    graph = new Graph(100, 100, 800, 400); 
   }
 
   public void draw() {
     int x_column_idx = dropdowns.selectedXIndex();
     int y_column_idx = dropdowns.selectedYIndex();
     int z_column_idx = dropdowns.selectedZIndex();
-    String[][] selectedData = districts.getColumns(x_column_idx,y_column_idx);
-    //String[][] selectedData = data.getColumns(selectedVars[0],selectedVars[1]);
-
-    //graph.displayData(selectedData);
+    String[][] selectedData = districts.getColumns(x_column_idx,
+                                     y_column_idx, z_column_idx);
+    graph.setVariables(selectedData);
+    graph.draw();
     dropdowns.draw(0, 0, width, SELECTION_GUI_HEIGHT);
   }
 

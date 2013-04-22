@@ -4,11 +4,13 @@ class District {
   String data[];
   HashMap<String, Integer> variables;
 
-  public District (HashMap _variables, String _data[]) {
+  public District (HashMap _variables, String _data[], 
+                   String _name, String _state) 
+  {
     data = _data;
     variables = _variables;
-    name = data[0];
-    state = data[1];
+    name = _name;
+    state = _state;
   }
 
   public float getVariable(String variable) {
