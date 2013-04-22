@@ -12,7 +12,7 @@ void setup() {
 
 void draw() {
   background(255);
-  gController.render();
+  gController.draw();
 }
 
 // ControlP5 event handler, delegates events to interested objects

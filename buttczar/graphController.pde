@@ -24,7 +24,7 @@ class GraphController {
     gui = new selectionGUI(cp5, column_names);
   }
 
-  public void render() {
+  public void draw() {
     int[] selectedVars      = gui.varsSelected();
     String[][] selectedData = districts.getColumns(selectedVars[0],selectedVars[1]);
     //graph.displayData(selectedData);
