@@ -3,10 +3,12 @@ DistrictData districts;
 void setup() {
     size(500, 500);
     districts = new DistrictData("../data/districtsSelectVariables.csv");
-    District d = districts.getDistrict("Baramula");
-    for (int i = 0; i < d.data.length; i++) {
-        println(d.data[i]);
+    String test[][] = districts.getColumns(3,6);
+    for (int i = 0; i < test[0].length; i++) {
+        println(test[0][i] + " " + test[1][i]
+              + " " + test[2][i]);
     }
+         
 }
 
 void draw() {

@@ -1,7 +1,11 @@
+import java.util.Iterator;
+import java.util.Map;
+
 class DistrictData {
     HashMap<String, Integer> varNameToIndex;
     HashMap<String, District> districts;  
     String indexToVarName[]; 
+    String values[][];
 
     // filename is a csv of data
     public DistrictData(String filename) {
@@ -9,7 +13,7 @@ class DistrictData {
         String name;
 
         String lines[] = loadStrings(filename);
-        String values[][]  = new String[lines.length-1][];
+        values  = new String[lines.length-1][];
         for (int i = 0; i < lines.length; i++) {
             if (i == 0) {
                 indexToVarName = split(lines[i], ',');
@@ -38,6 +42,24 @@ class DistrictData {
 
     public float getDistrictValue(String name, String feature) {
         return (districts.get(name)).getVariable(feature);
+    }
+
+    public String[][] getColumns(int var1, int var2) {
+        String columns[][] = new String[3][districts.size()+1]; 
+        columns[0][0] = "Name";
+        columns[1][0] = indexToVarName[var1];
+        columns[2][0] = indexToVarName[var2];
+        Iterator iter = districts.entrySet().iterator();
+        int i = 1; 
+        while (iter.hasNext()) {
+            Map.Entry x = (Map.Entry)iter.next();
+            columns[0][i] = (String)x.getKey();
+            District d = (District)x.getValue(); 
+            columns[1][i] = d.data[var1];
+            columns[2][i] = d.data[var2];
+            i++;
+        }
+        return columns;
     }
 
 }
