@@ -1,26 +1,19 @@
 import controlP5.*;
 
-final float SELECTS_HEIGHT = 50;
-
 class selectionGUI {
 
   // graphical objects
-  ControlP5             cp5;
-  GraphController       gController;
-  DropdownSelectGroup   column_selects;
+  ControlP5 cp5;
+  DropdownSelectGroup column_selects;
 
-  public selectionGUI() {
-    cp5 = new ControlP5();
-    PFont pfont = createFont("Arial", 12); //use true/false for smooth/no-smooth
-    ControlFont cp5font = new ControlFont(pfont);
-    cp5.setControlFont(cp5font);
-
-    String[] column_names = { "Hello", "This is a longer name asklj sakl",
-                              "what's up", "yo", "derp", "herp", "blerp" };
+  public selectionGUI(ControlP5 _cp5, String[] column_names) {
+    cp5 = _cp5;
     column_selects = new DropdownSelectGroup(cp5, column_names);
-
   }
 
+  void render(float x, float y, float w, float h) {
+    column_selects.draw(x,y,w,h);
+  }
 
   // return which data variables are being selected by the gui
   public int[] varsSelected(){
@@ -32,12 +25,8 @@ class selectionGUI {
   }
 
   // ControlP5 event handler, delegates events to interested objects
-  private void controlEvent(ControlEvent e) {
-    if (e.isGroup()) {
-      column_selects.controlEvent(e);
-    }
-    else if (e.isController()) {
-    }
+  public void controlEvent(ControlEvent e) {
+    column_selects.controlEvent(e);
   }
 
 }
