@@ -94,4 +94,28 @@ class DistrictCollection {
     }
     return columns;
   }
+
+  public String[][] getColumnsForState(int var1, int var2, String state) {
+    String columns[][] = new String[3][districts.size()];
+    columns[0][0] = "Name";
+    columns[1][0] = indexToVarName[var1];
+    columns[2][0] = indexToVarName[var2];
+    Iterator iter = districts.entrySet().iterator();
+    int i = 1;
+    while (iter.hasNext()) {
+      Map.Entry x = (Map.Entry)iter.next();
+      District d = (District)x.getValue();
+      if (state.equals(d.state)) {
+        columns[0][i] = (String)x.getKey();
+        columns[1][i] = d.data[var1];
+        columns[2][i] = d.data[var2];
+        i++;
+      }
+    }
+    columns[0] = subset(columns[0], 0, i);
+    columns[1] = subset(columns[1], 0, i);
+    columns[2] = subset(columns[2], 0, i);
+    return columns;
+  }
+     
 }

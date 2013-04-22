@@ -19,6 +19,11 @@ class GraphController {
     districts = new DistrictCollection(filename);
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames);
     graph = new Graph(50, 75, 650, 650); 
+
+    //testing getColumnsForState
+    String [][] test = districts.getColumnsForState(0, 1, "Goa");
+    println(test[0].length);
+
   }
 
   public void draw() {
@@ -29,7 +34,7 @@ class GraphController {
                                      y_column_idx, z_column_idx);
     graph.setVariables(selectedData);
     graph.draw();
-    dropdowns.draw(0, 0, width, SELECTION_GUI_HEIGHT);
+    dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
   }
 
   // ControlP5 event handler, delegates events to interested objects
