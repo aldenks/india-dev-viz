@@ -117,5 +117,33 @@ class DistrictCollection {
     columns[2] = subset(columns[2], 0, i);
     return columns;
   }
+
+  public String[][] getColumnsForState(int var1, int var2, 
+                                       int var3, String state) 
+  {
+    String columns[][] = new String[4][districts.size()];
+    columns[0][0] = "Name";
+    columns[1][0] = indexToVarName[var1];
+    columns[2][0] = indexToVarName[var2];
+    columns[3][0] = indexToVarName[var3];
+    Iterator iter = districts.entrySet().iterator();
+    int i = 1;
+    while (iter.hasNext()) {
+      Map.Entry x = (Map.Entry)iter.next();
+      District d = (District)x.getValue();
+      if (state.equals(d.state)) {
+        columns[0][i] = (String)x.getKey();
+        columns[1][i] = d.data[var1];
+        columns[2][i] = d.data[var2];
+        columns[3][i] = d.data[var3];
+        i++;
+      }
+    }
+    columns[0] = subset(columns[0], 0, i);
+    columns[1] = subset(columns[1], 0, i);
+    columns[2] = subset(columns[2], 0, i);
+    columns[3] = subset(columns[3], 0, i);
+    return columns;
+  }
      
 }
