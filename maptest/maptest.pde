@@ -9,6 +9,8 @@ Polygons d;
 Polygons s;
 Polygons indiasimp;
 Points stateCentroids; 
+HashMap<Integer, Polygons> test;
+Polygons jharkhand; 
 void setup() {
   size(500,500);
   boundary = new BoundingBox(36, 97, 6, 68); 
@@ -24,11 +26,16 @@ void setup() {
   stateCentroids.setLabelField("NAME");
   india.setValueField("TOT_POP");
   india.setColourScale(color(83,27,94),color(71,58,42),15);
+  
+  
+  test = india.getPolygonsWithId("STATE_ID");
+  jharkhand = test.get(20);
+  
   println("---------------");
   println("---------------");
   println("---------------");
   println("---------------");
-  org.geotools.feature.collection.DelegateSimpleFeatureIterator iterator = india.getFeatures();
+  //org.geotools.feature.collection.DelegateSimpleFeatureIterator iterator = india.getFeatures();
   print(india.getFeatures());
 }
 
@@ -38,7 +45,9 @@ void draw() {
   //world.project(this);
   india.projectValues(this,5000f,17000000f);
   fill(0, 0, 100);
-  stateCentroids.label(this);
+  //stateCentroids.label(this);
+  fill(0);
+  jharkhand.project(this);
   //s.project(this);
   
 }
