@@ -64,6 +64,15 @@ class Graph {
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
     }
+
+    //radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
+    // show scale of circles
+    stroke(100,0,0);
+    text("Scale:", width-2*axis_w, y - max_radius);  
+    text(formatter.format(zmax) + " = ", width-2*axis_w, y-max_radius+15); 
+    ellipse(width-2*axis_w, y+25, sqrt(sq(max_radius)*(zmax / zmax)), 
+                        sqrt(sq(max_radius)*(zmax / zmax))); 
+    
     strokeWeight(1);
     stroke(0);
   }
