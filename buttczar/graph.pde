@@ -61,11 +61,22 @@ class Graph {
     ylocs = yLocations();
     zrad = zradii();
     ellipseMode(RADIUS);
+    float dist = 0;
+    float smallestDist = Float.MAX_VALUE;
+    int intersectionID = -1; 
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
+      dist = intersectionDist(i); 
+      if (dist < smallestDist) {
+        smallestDist = dist; 
+        intersectionID = i;
+      }
     }
 
-    //radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
+    if (intersectionID != -1) {
+      drawToolTip(intersectionID);
+    }
+
     // show scale of circles
     stroke(100,0,0);
     text("Scale:", width-2*axis_w, y - max_radius);  
@@ -76,6 +87,22 @@ class Graph {
     strokeWeight(1);
     stroke(0);
   }
+
+  float intersectionDist(int i) {
+    float dist = sqrt(mouseX - xlocs[i]) * (mouseX - xlocs[i]) +
+                     ((mouseY - ylocs[i]) * (mouseY - ylocs[i]));
+    if (dist < zrad[i]) {
+      return dist;
+    }
+    else {
+      return Float.MAX_VALUE;
+    }
+  }
+
+  void drawToolTip(int index) {
+    rect(mouseX, mouseY, 100, 50);
+  }
+                        
   
   void setVariables (String[][] data) {
     xs = new float [data[1].length-1];
