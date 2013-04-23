@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 class Graph { 
   float[] xs, ys, zs;
   float[] xlocs, ylocs, zrad;
@@ -28,9 +30,10 @@ class Graph {
     fill(color(0,0,0));
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
-    textAlign(LEFT, CENTER);
-    text(ly, x+4, y+(ploth/2.0));
+    textAlign(CENTER, CENTER);
+    text(ly, x+10, y+(ploth/2.0));
     
+    DecimalFormat formatter = new DecimalFormat("#,##0.0"); 
     // y value labels
     int num_y_labels = 5;
     float v = ((float)ymax)/num_y_labels;
@@ -38,16 +41,15 @@ class Graph {
     float y_loc = y + ploth;
     textAlign(CENTER, CENTER);
     for (int i = 0; i <= num_y_labels; i++) {
-       text(i*v, x+(axis_w/2.0), y_loc);
+       text(formatter.format(i*v), x+(axis_w/5.0), y_loc);
        y_loc -= y_label_dist;
     }
-    
     // x value labels
     float x_label_dist = ((float)plotw)/num_y_labels;
     float u = ((float)xmax)/num_y_labels;
     float x_loc = plotx; 
     for (int i = 0; i <= num_y_labels; i++) {
-       text(i*u, x_loc, ploty+ploth+(axis_w/2.0));
+       text(formatter.format(i*u), x_loc, ploty+ploth+(axis_w/2.0));
        x_loc += x_label_dist;
     }
     
@@ -111,7 +113,7 @@ class Graph {
   }
   
   float[] zradii() {
-    float [] radii = new float[zs.length];    
+    float[] radii = new float[zs.length];    
     for (int i = 0; i < radii.length; i++) {
       radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
       if (radii[i] < min_radius) {

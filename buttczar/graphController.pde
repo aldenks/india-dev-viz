@@ -19,11 +19,6 @@ class GraphController {
     districts = new DistrictCollection(filename);
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames);
     graph = new Graph(50, 75, 650, 650); 
-
-    //testing getColumnsForState
-    String [][] test = districts.getColumnsForState(0, 1, "Goa");
-    println(test[0].length);
-
   }
 
   public void draw() {
