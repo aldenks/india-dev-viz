@@ -28,8 +28,8 @@ class GraphController {
     int y_column_idx = dropdowns.selectedYIndex();
     int z_column_idx = dropdowns.selectedZIndex();
     String selected_state = dropdowns.selectedStateName();
-    String[][] selectedData = districts.getColumns(x_column_idx,
-                                     y_column_idx, z_column_idx);
+    String[][] selectedData = districts.getColumnsForState(x_column_idx,
+                             y_column_idx, z_column_idx, selected_state);
     graph.setVariables(selectedData);
     graph.draw();
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);

@@ -108,7 +108,7 @@ class DistrictCollection {
   }
 
   public String[][] getColumnsForState(int var1, int var2, String state) {
-    String columns[][] = new String[4][districts.size()];
+    String columns[][] = new String[4][districts.size() + 1];
     columns[0][0] = "Name";
     columns[1][0] = indexToVarName[var1];
     columns[2][0] = indexToVarName[var2];
@@ -136,7 +136,7 @@ class DistrictCollection {
   public String[][] getColumnsForState(int var1, int var2,
                                        int var3, String state)
   {
-    String columns[][] = new String[5][districts.size()];
+    String columns[][] = new String[5][districts.size() + 1];
     columns[0][0] = "Name";
     columns[1][0] = indexToVarName[var1];
     columns[2][0] = indexToVarName[var2];
