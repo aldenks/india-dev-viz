@@ -36,7 +36,7 @@ class DropdownSelectGroup {
             for (int i = 0; i < column_names.length; i++) {
                 d.addItem(column_names[i], i);
             }
-            d.setSize(SINGLE_SELECT_WIDTH, 15*ITEM_HEIGHT)
+            d.setSize(SINGLE_SELECT_WIDTH, 27*ITEM_HEIGHT)
                .setBarHeight(ITEM_HEIGHT)
                .setItemHeight(ITEM_HEIGHT)
                .toUpperCase(false);
