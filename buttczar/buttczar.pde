@@ -1,6 +1,6 @@
 import controlP5.*;
 
-final String INPUT_FILENAME = "../data/districtsSelectVariables.csv";
+final String INPUT_FILENAME = "../data/districtsRatioVariables.csv";
 GraphController gController;
 ControlP5 cp5;
 

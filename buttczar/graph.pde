@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 
-class Graph { 
+class Graph {
   float[] xs, ys, zs;
   float[] xlocs, ylocs, zrad;
   String lx, ly;
@@ -9,9 +9,9 @@ class Graph {
   float x,y,h,w;
   float plotx, ploty, ploth, plotw;
   float max_radius, min_radius;
-  
-  //take in 2d string array 
-  
+
+  //take in 2d string array
+
   public Graph(float _x, float _y, float _w, float _h) {
     axis_w = 70;
     max_radius = 25;
@@ -20,20 +20,20 @@ class Graph {
     plotx = x+axis_w; ploty = y;
     ploth = h-axis_w; plotw = w-axis_w;
   }
-  
+
   void draw() {
     // axis lines
     line(plotx,ploty,plotx,ploty+ploth);
     line(plotx,ploty+ploth,plotx+plotw, ploty+ploth);
-    
+
     // axis labels
     fill(color(0,0,0));
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
     textAlign(CENTER, CENTER);
     text(ly, x+10, y+(ploth/2.0));
-    
-    DecimalFormat formatter = new DecimalFormat("#,##0.0"); 
+
+    DecimalFormat formatter = new DecimalFormat("#,##0.0");
     // y value labels
     int num_y_labels = 5;
     float v = ((float)ymax)/num_y_labels;
@@ -47,12 +47,12 @@ class Graph {
     // x value labels
     float x_label_dist = ((float)plotw)/num_y_labels;
     float u = ((float)xmax)/num_y_labels;
-    float x_loc = plotx; 
+    float x_loc = plotx;
     for (int i = 0; i <= num_y_labels; i++) {
        text(formatter.format(i*u), x_loc, ploty+ploth+(axis_w/2.0));
        x_loc += x_label_dist;
     }
-    
+
     // CIRCLES
     noFill();
     strokeWeight(2);
@@ -63,12 +63,12 @@ class Graph {
     ellipseMode(RADIUS);
     float dist = 0;
     float smallestDist = Float.MAX_VALUE;
-    int intersectionID = -1; 
+    int intersectionID = -1;
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
-      dist = intersectionDist(i); 
+      dist = intersectionDist(i);
       if (dist < smallestDist) {
-        smallestDist = dist; 
+        smallestDist = dist;
         intersectionID = i;
       }
     }
@@ -79,18 +79,18 @@ class Graph {
 
     // show scale of circles
     stroke(100,0,0);
-    text("Scale:", width-2*axis_w, y - max_radius);  
-    text(formatter.format(zmax) + " = ", width-2*axis_w, y-max_radius+15); 
-    ellipse(width-2*axis_w, y+25, sqrt(sq(max_radius)*(zmax / zmax)), 
-                        sqrt(sq(max_radius)*(zmax / zmax))); 
-    
+    text("Scale:", width-2*axis_w, y - max_radius);
+    text(formatter.format(zmax) + " = ", width-2*axis_w, y-max_radius+15);
+    ellipse(width-2*axis_w, y+25, sqrt(sq(max_radius)*(zmax / zmax)),
+                        sqrt(sq(max_radius)*(zmax / zmax)));
+
     strokeWeight(1);
     stroke(0);
   }
 
   float intersectionDist(int i) {
-    float dist = sqrt(mouseX - xlocs[i]) * (mouseX - xlocs[i]) +
-                     ((mouseY - ylocs[i]) * (mouseY - ylocs[i]));
+    float dist = sqrt(abs((mouseX - xlocs[i]) * (mouseX - xlocs[i])) +
+                     abs((mouseY - ylocs[i]) * (mouseY - ylocs[i])));
     if (dist < zrad[i]) {
       return dist;
     }
@@ -102,8 +102,8 @@ class Graph {
   void drawToolTip(int index) {
     rect(mouseX, mouseY, 100, 50);
   }
-                        
-  
+
+
   void setVariables (String[][] data) {
     xs = new float [data[1].length-1];
     ys = new float [data[1].length-1];
@@ -111,7 +111,7 @@ class Graph {
     xlocs = new float [data[1].length-1];
     ylocs = new float [data[1].length-1];
     zrad = new float [data[1].length-1];
-    for (int i=0; i<data[1].length-1; i++) { 
+    for (int i=0; i<data[1].length-1; i++) {
       xs[i] = float(data[1][1+i]);
       ys[i] = float(data[2][1+i]);
       zs[i] = float(data[3][1+i]);
@@ -124,12 +124,12 @@ class Graph {
       if (zs[i] > zmax) zmax = zs[i];
     }
   }
-  
+
   void setWidthHeight(float _w, float _h) {
     h = _h; w = _w;
     ploth = h-axis_w; plotw = w-axis_w;
   }
-  
+
   float[] xLocations() {
     float[] locs = new float[xs.length];
     float yaxis = plotx;
@@ -138,7 +138,7 @@ class Graph {
     }
     return locs;
   }
-  
+
   float[] yLocations() {
     float[] locs = new float[ys.length];
     float xaxis = y + ploth;
@@ -147,9 +147,9 @@ class Graph {
     }
     return locs;
   }
-  
+
   float[] zradii() {
-    float[] radii = new float[zs.length];    
+    float[] radii = new float[zs.length];
     for (int i = 0; i < radii.length; i++) {
       radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
       if (radii[i] < min_radius) {
