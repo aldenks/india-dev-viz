@@ -80,13 +80,11 @@ class Graph {
 
     // show scale of circles
     stroke(100,0,0);
-    fill(0,0,0);
     text("Scale:", width-2*axis_w, y - max_radius+5);
     text(formatter.format(zmax*.8) + " = ", width-2*axis_w, y-max_radius+25);
     text(formatter.format(zmax*.2) + " = ", width-2*axis_w, y-max_radius+70);
 //    ellipse(width-2*axis_w, y+25, sqrt(sq(max_radius)*(zmax / zmax)),
   //                      sqrt(sq(max_radius)*(zmax / zmax)));
-    noFill();
     ellipse(width-2*axis_w+65, y-max_radius+25, sqrt(sq(max_radius)*.8),
                             sqrt(sq(max_radius)*.8));
     ellipse(width-2*axis_w+65, y-max_radius+70, sqrt(sq(max_radius)*.2),
@@ -107,15 +105,10 @@ class Graph {
   }
 
   void drawToolTip(int index) {
-    float xPadding = 5;
-    float strLen = textWidth(names[index]);
-    fill(#002b36);
-    rect(mouseX, mouseY, strLen + 2*xPadding, -15);
-    textAlign(LEFT,BOTTOM);
-    fill(#93a1a1);
-    text(names[index],mouseX + xPadding,mouseY);
-    textAlign(CENTER,CENTER); //KEEP THIS HERE
-    noFill();
+    int strLen = textWidth(names[index]);
+    rect(mouseX, mouseY, strLen, 50);
+    textAlign(LEFT);
+    text(names[index],mouseX,mouseY);
   }
 
 
