@@ -7,13 +7,21 @@ class DistrictCollection {
   HashMap<String, District> districts;
   String indexToVarName[];
   String values[][];
-  public final String variableNames[] = {"Opencast Coal Output", 
-    "Below Ground Coal Output", "Total Area", "Total Population", 
-    "Male Population", "Female Population", "Total Literates", 
-    "Male Literates", "Female Literates", "Total Workers", "Male Workers", 
-    "Female Workers", "Total Cultivators", "Total Agricultural Laborers", 
-    "Total Non-workers", "Rural Total Population", "Rural Total Literates", 
+  public final String variableNames[] = {"Opencast Coal Output",
+    "Below Ground Coal Output", "Total Area", "Total Population",
+    "Male Population", "Female Population", "Total Literates",
+    "Male Literates", "Female Literates", "Total Workers", "Male Workers",
+    "Female Workers", "Total Cultivators", "Total Agricultural Laborers",
+    "Total Non-workers", "Rural Total Population", "Rural Total Literates",
     "Urban Total Population", "Urban Total Literates"};
+  public final String stateNames[] = { "Jammu & Kashmir", "Himachal Pradesh",
+    "Punjab", "Uttranchal", "Haryana", "Chandigarh", "Uttar Pradesh",
+    "Rajasthan", "Arunachal Pradesh", "Delhi", "Sikkim", "Assam", "Bihar",
+    "West Bengal", "Nagaland", "Madhya Pradesh", "Meghalaya", "Manipur",
+    "Jharkhand", "Gujarat", "Tripura", "Mizoram", "Chhattisgarh", "Orissa",
+    "Maharashtra", "Daman & Diu", "Dadra & Nagar Haveli", "Andhra Pradesh",
+    "Karnataka", "Pondicherry", "Goa", "Andaman & Nicobar", "Tamil Nadu",
+    "Kerala", "Lakshadweep" };
 
   public DistrictCollection(String filename) {
     districts = new HashMap(650);
@@ -40,7 +48,7 @@ class DistrictCollection {
     for (int i = 0; i < values.length; i++) {
       name = values[i][0];
       if (!districts.containsKey(name)) {
-        District d = new District(varNameToIndex, subset(values[i], 2), 
+        District d = new District(varNameToIndex, subset(values[i], 2),
                                   values[i][0], values[i][1]);
         districts.put(name, d);
       }
@@ -125,8 +133,8 @@ class DistrictCollection {
     return columns;
   }
 
-  public String[][] getColumnsForState(int var1, int var2, 
-                                       int var3, String state) 
+  public String[][] getColumnsForState(int var1, int var2,
+                                       int var3, String state)
   {
     String columns[][] = new String[5][districts.size()];
     columns[0][0] = "Name";
@@ -136,10 +144,11 @@ class DistrictCollection {
     columns[4][0] = "State";
     Iterator iter = districts.entrySet().iterator();
     int i = 1;
+    boolean all_states = state.equals("All States");
     while (iter.hasNext()) {
       Map.Entry x = (Map.Entry)iter.next();
       District d = (District)x.getValue();
-      if (state.equals(d.state)) {
+      if (all_states || state.equals(d.state)) {
         columns[0][i] = (String)x.getKey();
         columns[1][i] = d.data[var1];
         columns[2][i] = d.data[var2];
@@ -155,5 +164,5 @@ class DistrictCollection {
     columns[4] = subset(columns[4], 0, i);
     return columns;
   }
-     
+
 }

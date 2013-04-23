@@ -17,14 +17,16 @@ class GraphController {
     cp5.setControlFont(cp5font);
 
     districts = new DistrictCollection(filename);
-    dropdowns = new DropdownSelectGroup(cp5, districts.variableNames);
-    graph = new Graph(50, 75, 650, 650); 
+    dropdowns = new DropdownSelectGroup(cp5, districts.variableNames,
+                                             districts.stateNames);
+    graph = new Graph(50, 75, 650, 650);
   }
 
   public void draw() {
     int x_column_idx = dropdowns.selectedXIndex();
     int y_column_idx = dropdowns.selectedYIndex();
     int z_column_idx = dropdowns.selectedZIndex();
+    String selected_state = dropdowns.selectedStateName();
     String[][] selectedData = districts.getColumns(x_column_idx,
                                      y_column_idx, z_column_idx);
     graph.setVariables(selectedData);
