@@ -16,12 +16,14 @@ class DropdownSelectGroup {
     int selected_x_idx, selected_y_idx, selected_z_idx, selected_state_idx;
     DropdownList ddx, ddy, ddz, dds; // DropDowns for X, Y, Z, and State
     String[] state_names;
+    PImage circles_label_img;
 
     final float TOTAL_WIDTH;
-    static final int SINGLE_SELECT_WIDTH = 200;
-    static final int LABEL_WIDTH = 25;
+    static final int SINGLE_SELECT_WIDTH = 170;
+    static final int LABEL_WIDTH = 32;
     static final int ITEM_HEIGHT = 20;
-    static final int PADDING = 10;
+    static final int PADDING = 20;
+    static final int LABEL_NUDGE = 3;
     private boolean first_run = true;
 
     public DropdownSelectGroup(ControlP5 cp5, String[] column_names,
@@ -45,7 +47,8 @@ class DropdownSelectGroup {
         }
         customizeDropdown(dds);
         TOTAL_WIDTH = 4*SINGLE_SELECT_WIDTH + 4*LABEL_WIDTH + 3*PADDING;
-                  }
+        circles_label_img = loadImage("../img/concentric_circles.png");
+    }
 
     void draw(float x, float y, float w, float h) {
         if (first_run) {
@@ -53,13 +56,23 @@ class DropdownSelectGroup {
             first_run = false;
         }
         pushStyle();
-        float dd_y_pos = y + (h/2) + (float(ITEM_HEIGHT)/2);
+        float y_center = y + (h/2);
+        float dd_y_pos = y_center + (float(ITEM_HEIGHT)/2);
         float x_begin = (float(width)/2) - (TOTAL_WIDTH/2);
+        float dd_begin = x_begin + LABEL_WIDTH;
+        x_begin = x_begin < 0 ? 0 : x_begin;
         int item_width = SINGLE_SELECT_WIDTH + PADDING + LABEL_WIDTH;
-        ddx.setPosition(x_begin + 0*item_width, dd_y_pos);
-        ddy.setPosition(x_begin + 1*item_width, dd_y_pos);
-        ddz.setPosition(x_begin + 2*item_width, dd_y_pos);
-        dds.setPosition(x_begin + 3*item_width, dd_y_pos);
+        dds.setPosition(dd_begin + 0*item_width, dd_y_pos);
+        ddx.setPosition(dd_begin + 1*item_width, dd_y_pos);
+        ddy.setPosition(dd_begin + 2*item_width, dd_y_pos);
+        ddz.setPosition(dd_begin + 3*item_width, dd_y_pos);
+        textAlign(RIGHT, CENTER);
+        textSize(18);
+        text("X: ", dd_begin + 1*item_width,     y_center - LABEL_NUDGE);
+        text("Y: ", dd_begin + 2*item_width,     y_center - LABEL_NUDGE);
+        text(  ":", dd_begin + 3*item_width - 2, y_center - LABEL_NUDGE);
+        image(circles_label_img, x_begin + 3*item_width,
+              y_center - float(circles_label_img.height)/2);
         popStyle();
     }
 

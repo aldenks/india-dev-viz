@@ -13,6 +13,7 @@ class GraphController {
   public GraphController(String filename, ControlP5 _cp5){
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
+    textFont(pfont);
     ControlFont cp5font = new ControlFont(pfont);
     cp5.setControlFont(cp5font);
 
