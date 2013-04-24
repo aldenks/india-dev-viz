@@ -8,6 +8,8 @@ class VizController {
   DropdownSelectGroup dropdowns;
   IndiaMap map;
   int prev_x_col_idx, prev_y_col_idx, prev_z_col_idx;
+  ArrayList old_selected_districts;
+  ArrayList new_selected_districts;
   String prev_state;
   HashMap<String, Integer> stateColors;
 
@@ -27,6 +29,9 @@ class VizController {
     initColors();
     graph = new Graph(50, 75, 650, 650);
     map = new IndiaMap(stateColors, a);
+    old_selected_districts = new ArrayList();
+    new_selected_districts = new ArrayList();
+    map.draw();
   }
 
   public void draw() {
@@ -44,8 +49,33 @@ class VizController {
     }
     graph.draw();
     // getSelectedDistrictNames() must be called after graph.draw()
+
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
-    ArrayList selected_districts = graph.getSelectedDistrictNames();
+    
+    old_selected_districts = new_selected_districts;
+    new_selected_districts = graph.getSelectedDistrictNames();
+    Boolean districtsEqual = true;
+    if (old_selected_districts.size() == new_selected_districts.size()) {
+      for (int i = 0; i < old_selected_districts.size(); i++) {
+        if (old_selected_districts.get(i) != new_selected_districts.get(i)) {
+          districtsEqual = false;
+        }
+      }
+    }
+    else {
+      districtsEqual = false;
+    }
+
+    if (!districtsEqual) {
+      println("changed");
+      map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
+      map.draw();
+    }
+    else {
+      map.drawImage();
+    }
+
+/*
     if (selected_districts.size() != 0) {
       selected_districts = districts.getIDsFromNames(selected_districts);
       map.updateSelectedDistricts(selected_districts);
@@ -54,7 +84,7 @@ class VizController {
       selected_districts = new ArrayList();
     } 
     map.updateSelectedDistricts(selected_districts);
-    map.draw();
+    map.draw();*/
 
     prev_x_col_idx = x_column_idx;
     prev_y_col_idx = y_column_idx;

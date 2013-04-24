@@ -44,6 +44,8 @@ class IndiaMap {
       colors[i] = c; 
       i++;
     }
+
+    selectedDistricts = new ArrayList();
   }
 
   public void updateSelectedDistricts(ArrayList d) {
@@ -69,7 +71,12 @@ class IndiaMap {
       }
       noFill();
     }
-    
+
+    currentMap = get(765, 110, 495, 585);
+  }
+
+  public void drawImage() {
+    image(currentMap, 765, 100);
   }
 
 }
