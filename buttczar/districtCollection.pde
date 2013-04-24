@@ -5,6 +5,7 @@ class DistrictCollection {
 
   HashMap<String, Integer> varNameToIndex;
   HashMap<String, District> districts;
+  HashMap<String, Integer> stateNameToID;
   String indexToVarName[];
   String values[][];
   public final String variableNames[] = {"Opencast Coal Output",
@@ -23,11 +24,11 @@ class DistrictCollection {
     "Karnataka", "Pondicherry", "Goa", "Andaman & Nicobar", "Tamil Nadu",
     "Kerala", "Lakshadweep" };
 
-  public DistrictCollection(String filename) {
+  public DistrictCollection(String data_filename, String states_filename) {
     districts = new HashMap(650);
+    stateNameToID = new HashMap(36);
     String name;
-
-    String lines[] = loadStrings(filename);
+    String lines[] = loadStrings(data_filename);
     values  = new String[lines.length-1][];
     for (int i = 0; i < lines.length; i++) {
       if (i == 0) {
@@ -52,6 +53,12 @@ class DistrictCollection {
                                   values[i][0], values[i][1]);
         districts.put(name, d);
       }
+    }
+    lines = loadStrings(states_filename);
+    for (int i = 1; i < lines.length; i++) {
+      int ID       = int(split(lines[i],',')[0]);
+      String state = split(lines[i],',')[1];
+      stateNameToID.put(state,ID);
     }
   }
 
@@ -163,6 +170,10 @@ class DistrictCollection {
     columns[3] = subset(columns[3], 0, i);
     columns[4] = subset(columns[4], 0, i);
     return columns;
+  }
+
+  public HashMap<String, Integer> getStateToID(){
+    return stateNameToID;
   }
 
 }
