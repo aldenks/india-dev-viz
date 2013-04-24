@@ -63,8 +63,6 @@ class Graph {
 
     // CIRCLES
     noFill();
-    strokeWeight(2);
-    stroke(0, 0, 0, 150);
     xlocs = xLocations();
     ylocs = yLocations();
     zrad = zradii();
@@ -74,9 +72,16 @@ class Graph {
     int intersectionID = -1;
     if (mousePressed) {
       selected_districts.clear();
+      stroke(0, 43, 54, 100);
+      strokeWeight(1);
+      fill(0, 43, 54, 20); 
       rect(drag_start_x,drag_start_y,mouseX - drag_start_x,
           mouseY - drag_start_y);
     }
+    strokeWeight(2);
+    stroke(0, 0, 0, 150);
+    noFill();
+    xlocs = xLocations();
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
       dist = intersectionDist(i);
