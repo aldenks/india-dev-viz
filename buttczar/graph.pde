@@ -6,6 +6,7 @@ class Graph {
   float[] xlocs, ylocs, zrad;
   String lx, ly, lz;
   String[] names;
+  String[] districtNames;
   float xmax, ymax, zmax;
   float axis_w;
   float x,y,h,w;
@@ -62,8 +63,6 @@ class Graph {
 
     // CIRCLES
     noFill();
-    strokeWeight(2);
-    stroke(0, 0, 0, 150);
     xlocs = xLocations();
     ylocs = yLocations();
     zrad = zradii();
@@ -73,9 +72,16 @@ class Graph {
     int intersectionID = -1;
     if (mousePressed) {
       selected_districts.clear();
+      stroke(0, 43, 54, 100);
+      strokeWeight(1);
+      fill(0, 43, 54, 20); 
       rect(drag_start_x,drag_start_y,mouseX - drag_start_x,
           mouseY - drag_start_y);
     }
+    strokeWeight(2);
+    stroke(0, 0, 0, 150);
+    noFill();
+    xlocs = xLocations();
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
       dist = intersectionDist(i);
@@ -85,7 +91,7 @@ class Graph {
       }
       if (mousePressed && inRect(xlocs[i], ylocs[i],
                           drag_start_x, drag_start_y, mouseX, mouseY)) {
-        selected_districts.add(names[i]);
+        selected_districts.add(districtNames[i]);
       }
     }
 
@@ -171,11 +177,13 @@ class Graph {
     ylocs = new float [data[1].length-1];
     zrad  = new float [data[1].length-1];
     names = new String [data[1].length-1];
+    districtNames = new String [data[1].length-1];
     for (int i=0; i<data[1].length-1; i++) {
       xs[i]    = float(data[1][1+i]);
       ys[i]    = float(data[2][1+i]);
       zs[i]    = float(data[3][1+i]);
       names[i] = data[0][1+i] + ", " + data[4][1+i];
+      districtNames[i] = data[0][1+i];
     }
     lx = data[1][0]; ly = data[2][0]; lz = data[3][0];
     xmax = 0; ymax = 0; zmax = 0;
