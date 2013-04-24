@@ -19,22 +19,12 @@ void setup() {
              143, 139, 76, 50, 0, 0, 11, 0, 0, 114, 71, 
              66, 0, 0, 34, 203, 137, 180, 144, 96, 128, 255, 204, 23};
   for (int i=0; i< R.length; i++){
-    cs[i] = color(R[i], G[i], B[i]);
+    cs[i] = color(R[i], G[i], B[i], 100);
   }
-  
- // String [] cols = {"#FF0000"};
-  println(cs);
-/*     {  c1, color(#FF4500), color(#FFA500), color(#FFFF00),
-        color(#ADFF2F), color(#008000), color(#87CEFF), color(#EE82EE), 
-        color(#F4A460), color(#8B4513), color(#7FFFD4), color(#FFC125),
-        color(#ADD8E6), color(#FF00FF), color(#800000), color(#FFDAB9),
-        color(#FFC0CB), color(#D2B48C), color(#20B2AA), color(#FFFACD), 
-        color(#6B8E23), color(#872657), color(#FF8C69), color(#6A5ACD)};
-  println(cols);*/
-
 }
 
 void draw() {
+  background(255);
   for (int i = 0; i<36; i++){
     fill(cs[i]);
     rect(i*width/40, height*.25, 20, 200);

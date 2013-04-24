@@ -9,11 +9,13 @@ class VizController {
   IndiaMap map;
   int prev_x_col_idx, prev_y_col_idx, prev_z_col_idx;
   String prev_state;
+  color[] stateColors;
 
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
 
   public VizController(String filename, String state_filename, ControlP5 _cp5, PApplet a){
+    initColors();
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
@@ -24,7 +26,7 @@ class VizController {
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames,
                                              districts.stateNames);
     graph = new Graph(50, 75, 650, 650);
-    map = new IndiaMap(650, 400, 100, 100, a);
+    map = new IndiaMap(stateColors, a);
   }
 
   public void draw() {
@@ -68,5 +70,22 @@ class VizController {
   public void controlEvent(ControlEvent e) {
     dropdowns.controlEvent(e);
   }
+
+  void initColors() {
+    int[] R = {176, 180, 123, 95, 16, 0, 60, 0, 0, 107, 128, 189,
+               217, 255, 139, 153, 255, 255, 184, 255, 255, 250, 255, 
+               238, 255, 255, 178, 255, 205, 255, 208, 176, 128, 255, 153, 92 }; 
+    int[] G = {226, 205, 104, 158, 78, 206, 190, 250, 128, 142, 128, 183,
+               217, 236, 129, 204, 255, 215, 134, 165, 120, 128, 99, 
+               121, 69, 0, 34, 192, 104, 105, 32, 48, 0, 0, 50, 51};
+    int[] B = {255, 205, 238, 160, 139, 209, 113, 154, 0, 35, 0, 107,
+               143, 139, 76, 50, 0, 0, 11, 0, 0, 114, 71, 
+               66, 0, 0, 34, 203, 137, 180, 144, 96, 128, 255, 204, 23};
+    stateColors = new color[36];
+    for (int i=0; i< R.length; i++){
+      stateColors[i] = color(R[i], G[i], B[i], 100);
+    }
+  }
+    
 
 }
