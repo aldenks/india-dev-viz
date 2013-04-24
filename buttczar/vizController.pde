@@ -12,7 +12,7 @@ class VizController {
   final float SELECTION_GUI_HEIGHT = 50;
 
 
-  public VizController(String filename, String state_filename, ControlP5 _cp5){
+  public VizController(String filename, String state_filename, ControlP5 _cp5, PApplet a){
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
@@ -23,7 +23,7 @@ class VizController {
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames,
                                              districts.stateNames);
     graph = new Graph(50, 75, 650, 650);
-    map = new IndiaMap(650, 400, 100, 100);
+    map = new IndiaMap(650, 400, 100, 100, a);
   }
 
   public void draw() {
@@ -39,6 +39,7 @@ class VizController {
     ArrayList selected_districts = graph.getSelectedDistrictNames();
     //println(selected_districts);
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
+    map.draw();
   }
 
   void mousePressed() { graph.mousePressed(); }
