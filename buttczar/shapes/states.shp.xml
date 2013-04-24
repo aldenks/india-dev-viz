@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin>ML InfoMap (Firm : India)</origin>
+<pubdate>2008</pubdate>
+<title>States India 2001</title>
+<geoform>vector digital data</geoform>
+<onlink>http://www.mlinfomap.com/</onlink>
+<lworkcit>
+<citeinfo>
+<origin>ML InfoMap (Firm : India)</origin>
+<pubdate>2008</pubdate>
+<title>India Base Map</title>
+<pubinfo>
+<pubplace>New Delhi (India)</pubplace>
+<publish>ML InfoMap (Firm : India)</publish>
+</pubinfo>
+<onlink>http://www.mlinfomap.com/</onlink>
+</citeinfo>
+</lworkcit>
+<ftname Sync="TRUE">IndiaStates01</ftname>
+</citeinfo>
+</citation>
+<descript>
+<abstract>This polygon dataset shows state boundaries of India for 2001. Includes State socio-demographic Census attribute data such as total population, population by sex, rural/urban populations, household, literacy, and employment statistics. This layer is part of the IndiaMap dataset which includes socio-demographic and economic Census data for 2001 at the State, District, Sub-District, and Town levels. This data layer is sourced from secondary government sources, chiefly Survey of India, Census of India, Election Commission, etc. Scale 1:1,000,000.</abstract>
+<purpose>This dataset is intended for researchers, students, and policy makers for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</purpose>
+<langdata Sync="TRUE">en</langdata>
+</descript>
+<timeperd>
+<timeinfo>
+<sngdate>
+<caldate>2001</caldate>
+</sngdate>
+</timeinfo>
+<current>ground condition</current>
+</timeperd>
+<status>
+<progress>In work</progress>
+<update>None planned</update>
+</status>
+<spdom>
+<bounding>
+<westbc>68.196831</westbc>
+<eastbc>97.409096</eastbc>
+<northbc>37.121712</northbc>
+<southbc>6.767454</southbc>
+</bounding>
+<lboundng>
+<leftbc Sync="TRUE">68.196831</leftbc>
+<rightbc Sync="TRUE">97.409096</rightbc>
+<bottombc Sync="TRUE">6.767454</bottombc>
+<topbc Sync="TRUE">37.121712</topbc>
+</lboundng>
+</spdom>
+<keywords>
+<theme>
+<themekt>FGDC</themekt>
+<themekey>polygon</themekey>
+</theme>
+<theme>
+<themekt>ISO 19115 Topic Category</themekt>
+<themekey>boundaries</themekey>
+<themekey>society</themekey>
+<themekey>economy</themekey>
+<themekey>location</themekey>
+</theme>
+<theme>
+<themekt>LCSH</themekt>
+<themekey>India Boundaries</themekey>
+<themekey>Caste--India</themekey>
+<themekey>Sex distribution (Demography)</themekey>
+<themekey>Administrative and political divisions</themekey>
+<themekey>India--Population</themekey>
+</theme>
+<place>
+<placekt>GNS</placekt>
+<placekey>India</placekey>
+</place>
+<place>
+<placekt>LCNH</placekt>
+<placekey>Asia</placekey>
+<placekey>Northern Hemisphere</placekey>
+<placekey>Eastern Hemisphere</placekey>
+</place>
+</keywords>
+<accconst>Restricted Access Online: Access is granted to licensee only. Available only to Tufts University affiliates.</accconst>
+<useconst>For educational noncommercial use only.</useconst>
+<ptcontac>
+<cntinfo>
+<cntperp>
+<cntper>Dr. Manosi Lahiri</cntper>
+<cntorg>ML Infomap Pvt. Ltd.</cntorg>
+</cntperp>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>124-A</address>
+<city>Katwaria Sarai</city>
+<state>New Delhi</state>
+<postal>110016</postal>
+<country>India</country>
+</cntaddr>
+<cntvoice>91 11 41688592</cntvoice>
+<cntfax>91 11 41688593</cntfax>
+<cntemail>manosi@mlinfomap.com</cntemail>
+</cntinfo>
+</ptcontac>
+<native>Microsoft Windows Vista Version 6.1 (Build 7601) Service Pack 1; ESRI ArcCatalog 9.3.1.4000</native>
+<natvform Sync="TRUE">Shapefile</natvform>
+</idinfo>
+<dataqual>
+<lineage>
+<procstep>
+<procdesc>Changed name of file from STATE to IndiaStates01</procdesc>
+<procdate>20120314</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>Tufts University GIS Center</cntorg>
+</cntorgp>
+<cntpos>Data Technician</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>Academic Technology</address>
+<address>16 Dearborn Rd</address>
+<city>Somerville</city>
+<state>MA</state>
+<postal>02144</postal>
+</cntaddr>
+<cntvoice>617-627-3380</cntvoice>
+<cntemail>gis-support@elist.tufts.edu</cntemail>
+<hours>Monday - Friday, 9:00 am - 5:00 pm EST-USA</hours>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm Name="IndiaStates01">
+<sdtstype>G-polygon</sdtstype>
+<ptvctcnt>197</ptvctcnt>
+</sdtsterm>
+<esriterm Name="IndiaStates01">
+<efeatyp Sync="TRUE">Simple</efeatyp>
+<efeageom Sync="TRUE">Polygon</efeageom>
+<esritopo Sync="TRUE">FALSE</esritopo>
+<efeacnt Sync="TRUE">197</efeacnt>
+<spindex Sync="TRUE">FALSE</spindex>
+<linrefer Sync="TRUE">FALSE</linrefer>
+</esriterm>
+</ptvctinf>
+</spdoinfo>
+<spref>
+<horizsys>
+<geograph>
+<latres>0.000000</latres>
+<longres>0.000000</longres>
+<geogunit>Decimal degrees</geogunit>
+</geograph>
+<geodetic>
+<horizdn>D_WGS_1984</horizdn>
+<ellips>WGS_1984</ellips>
+<semiaxis>6378137.000000</semiaxis>
+<denflat>298.257224</denflat>
+</geodetic>
+<cordsysn>
+<geogcsn Sync="TRUE">GCS_WGS_1984</geogcsn>
+</cordsysn>
+</horizsys>
+</spref>
+<eainfo>
+<detailed Name="IndiaStates01">
+<enttyp>
+<enttypl>IndiaStates01</enttypl>
+<enttypt Sync="TRUE">Feature Class</enttypt>
+<enttypc Sync="TRUE">197</enttypc>
+</enttyp>
+<attr>
+<attrlabl>FID</attrlabl>
+<attrdef>Internal feature number</attrdef>
+<attrdefs>Environmental Systems Research Institute (Redlands, Calif.)</attrdefs>
+<attrdomv>
+<udom>Sequential unique whole numbers that are automatically generated.</udom>
+</attrdomv>
+<attalias Sync="TRUE">FID</attalias>
+<attrtype Sync="TRUE">OID</attrtype>
+<attwidth Sync="TRUE">4</attwidth>
+<atprecis Sync="TRUE">0</atprecis>
+<attscale Sync="TRUE">0</attscale>
+</attr>
+<attr>
+<attrlabl>Shape</attrlabl>
+<attrdef>Feature geometry</attrdef>
+<attrdefs>Environmental Systems Research Institute (Redlands, Calif.)</attrdefs>
+<attrdomv>
+<udom>Coordinates defining the features.</udom>
+</attrdomv>
+<attalias Sync="TRUE">Shape</attalias>
+<attrtype Sync="TRUE">Geometry</attrtype>
+<attwidth Sync="TRUE">0</attwidth>
+<atprecis Sync="TRUE">0</atprecis>
+<attscale Sync="TRUE">0</attscale>
+</attr>
+<attr>
+<attrlabl>STATE_ID</attrlabl>
+<attrdef>Unique idenification number</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">STATE_ID</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>NAME</attrlabl>
+<attrdef>State Name in 2001</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">NAME</attalias>
+<attrtype Sync="TRUE">String</attrtype>
+<attwidth Sync="TRUE">29</attwidth>
+</attr>
+<attr>
+<attrlabl>C_CODE01</attrlabl>
+<attrdef>Census code of villages in 2001</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">C_CODE01</attalias>
+<attrtype Sync="TRUE">String</attrtype>
+<attwidth Sync="TRUE">17</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_NM_HH</attrlabl>
+<attrdef>Total number of household</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_NM_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_POP</attrlabl>
+<attrdef>Total population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_POP</attrlabl>
+<attrdef>Male population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_POP</attrlabl>
+<attrdef>Female population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_L6</attrlabl>
+<attrdef>Total pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_L6</attrlabl>
+<attrdef>Male pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_L6</attrlabl>
+<attrdef>Female pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_SC</attrlabl>
+<attrdef>Total scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_SC</attrlabl>
+<attrdef>Male scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_SC</attrlabl>
+<attrdef>Female scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_ST</attrlabl>
+<attrdef>Total scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_ST</attrlabl>
+<attrdef>Male scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>F_ST</attrlabl>
+<attrdef>Female scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_LIT</attrlabl>
+<attrdef>Total literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_LIT</attrlabl>
+<attrdef>Male literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_LIT</attrlabl>
+<attrdef>Female literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_ILLT</attrlabl>
+<attrdef>Total Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_ILLT</attrlabl>
+<attrdef>Male Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_ILLT</attrlabl>
+<attrdef>Female Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_W</attrlabl>
+<attrdef>Total Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>M_W</attrlabl>
+<attrdef>Male Total Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_W</attrlabl>
+<attrdef>Female Total Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_MNW</attrlabl>
+<attrdef>Total Main Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MNW</attrlabl>
+<attrdef>Male Main Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MNW</attrlabl>
+<attrdef>Female Main Workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_CULT</attrlabl>
+<attrdef>Total Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_CULT</attrlabl>
+<attrdef>Male Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_CULT</attrlabl>
+<attrdef>Female Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_AGLB</attrlabl>
+<attrdef>Total Agricultural Labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_AGLB</attrlabl>
+<attrdef>Male Agricultural Labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>F_AGLB</attrlabl>
+<attrdef>Female Agricultural Labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_MFHH</attrlabl>
+<attrdef>Total Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MFHH</attrlabl>
+<attrdef>Male Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MFHH</attrlabl>
+<attrdef>Female Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_OTH_W</attrlabl>
+<attrdef>Total other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>M_OTH_W</attrlabl>
+<attrdef>Male other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>F_OTH_W</attrlabl>
+<attrdef>Female other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_MRW</attrlabl>
+<attrdef>Total Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MRW</attrlabl>
+<attrdef>Male Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MRW</attrlabl>
+<attrdef>Female Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>T_MRG_CULT</attrlabl>
+<attrdef>Total Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">T_MRG_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MRG_CULT</attrlabl>
+<attrdef>Male Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MRG_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MRG_CULT</attrlabl>
+<attrdef>Female Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MRG_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>T_MRG_AGLB</attrlabl>
+<attrdef>Total Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">T_MRG_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MRG_AGLB</attrlabl>
+<attrdef>Male Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MRG_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MRG_AGLB</attrlabl>
+<attrdef>Female Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MRG_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>T_MRG_HH</attrlabl>
+<attrdef>Total Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">T_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MRG_HH</attrlabl>
+<attrdef>Male Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MRG_HH</attrlabl>
+<attrdef>Female Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>T_MRG_OTH</attrlabl>
+<attrdef>Total Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">T_MRG_OTH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>M_MRG_OTH</attrlabl>
+<attrdef>Male Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_MRG_OTH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>F_MRG_OTH</attrlabl>
+<attrdef>Female Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_MRG_OTH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>TOT_NNW</attrlabl>
+<attrdef>Total Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">TOT_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>M_NNW</attrlabl>
+<attrdef>Male Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">M_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>F_NNW</attrlabl>
+<attrdef>Female Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">F_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_NM_H</attrlabl>
+<attrdef>Total rural number of household</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_NM_H</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_POP</attrlabl>
+<attrdef>Total rural population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_POP</attrlabl>
+<attrdef>Rural male population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_POP</attrlabl>
+<attrdef>Rural female population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_L6</attrlabl>
+<attrdef>Total rural pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_L6</attrlabl>
+<attrdef>Rural male pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_L6</attrlabl>
+<attrdef>Rural female pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_SC</attrlabl>
+<attrdef>Total rural scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_SC</attrlabl>
+<attrdef>Rural male scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_SC</attrlabl>
+<attrdef>Rural female scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_ST</attrlabl>
+<attrdef>Total rural scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_ST</attrlabl>
+<attrdef>Rural male scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_ST</attrlabl>
+<attrdef>Rural female scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_LIT</attrlabl>
+<attrdef>Total rural literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_LIT</attrlabl>
+<attrdef>Rural male literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_LIT</attrlabl>
+<attrdef>Rural female literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_ILLT</attrlabl>
+<attrdef>Total rural Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_ILLT</attrlabl>
+<attrdef>Rural male Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_ILLT</attrlabl>
+<attrdef>Rural female Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_W</attrlabl>
+<attrdef>Total rural workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_W</attrlabl>
+<attrdef>Rural male workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_W</attrlabl>
+<attrdef>Rural female workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_MNW</attrlabl>
+<attrdef>Total rural main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MNW</attrlabl>
+<attrdef>Rural male main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MNW</attrlabl>
+<attrdef>Rural female main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_CULT</attrlabl>
+<attrdef>Total rural Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_CULT</attrlabl>
+<attrdef>Rural male Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_CULT</attrlabl>
+<attrdef>Rural female Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_AGLB</attrlabl>
+<attrdef>Total rural agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_AGLB</attrlabl>
+<attrdef>Rural male agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_AGLB</attrlabl>
+<attrdef>Rural female agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_MFHH</attrlabl>
+<attrdef>Total rural Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MFHH</attrlabl>
+<attrdef>Rural male Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MFHH</attrlabl>
+<attrdef>Rural female Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_OTH_</attrlabl>
+<attrdef>Total rural other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_OTH_</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_OTH_W</attrlabl>
+<attrdef>Rural male other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_OTH_W</attrlabl>
+<attrdef>Rural female other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_MRW</attrlabl>
+<attrdef>Total rural Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MRW</attrlabl>
+<attrdef>Rural male Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MRW</attrlabl>
+<attrdef>Rural female Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_T_MRG_CU</attrlabl>
+<attrdef>Total rural Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_T_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MRG_CU</attrlabl>
+<attrdef>Rural male Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MRG_CU</attrlabl>
+<attrdef>Rural female Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_T_MRG_AG</attrlabl>
+<attrdef>Total rural Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_T_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MRG_AG</attrlabl>
+<attrdef>Rural male Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">15</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MRG_AG</attrlabl>
+<attrdef>Rural female Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_T_MRG_HH</attrlabl>
+<attrdef>Total rural Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_T_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MRG_HH</attrlabl>
+<attrdef>Rural male Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MRG_HH</attrlabl>
+<attrdef>Rural female Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>R_T_MRG_OT</attrlabl>
+<attrdef>Total rural Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_T_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_MRG_OT</attrlabl>
+<attrdef>Rural male Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">15</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_MRG_OT</attrlabl>
+<attrdef>Rural female Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>R_TOT_NNW</attrlabl>
+<attrdef>Total rural Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_TOT_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>R_M_NNW</attrlabl>
+<attrdef>Rural male Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_M_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>R_F_NNW</attrlabl>
+<attrdef>Rural female Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">R_F_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_NM_H</attrlabl>
+<attrdef>Total urban number of household</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_NM_H</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_POP</attrlabl>
+<attrdef>Total urban population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_POP</attrlabl>
+<attrdef>Urban male population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_POP</attrlabl>
+<attrdef>Urban female population</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_POP</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_L6</attrlabl>
+<attrdef>Total urban pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_L6</attrlabl>
+<attrdef>Urban male pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_L6</attrlabl>
+<attrdef>Urban female pop below 6 years</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_L6</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_SC</attrlabl>
+<attrdef>Total urban scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_SC</attrlabl>
+<attrdef>Urban male scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_SC</attrlabl>
+<attrdef>Urban female scheduled caste</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_SC</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_ST</attrlabl>
+<attrdef>Total urban scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_ST</attrlabl>
+<attrdef>Urban male scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_ST</attrlabl>
+<attrdef>Urban female scheduled tribe</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_ST</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">7</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_LIT</attrlabl>
+<attrdef>Total urban literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_LIT</attrlabl>
+<attrdef>Urban male literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_LIT</attrlabl>
+<attrdef>Urban female literates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_LIT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_ILLT</attrlabl>
+<attrdef>Total urban Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_ILLT</attrlabl>
+<attrdef>Urban male Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_ILLT</attrlabl>
+<attrdef>Urban female Illiterates</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_ILLT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_W</attrlabl>
+<attrdef>Total urban workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_W</attrlabl>
+<attrdef>Urban male workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">9</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_W</attrlabl>
+<attrdef>Urban female workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">8</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_MNW</attrlabl>
+<attrdef>Total urban main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MNW</attrlabl>
+<attrdef>Urban male main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MNW</attrlabl>
+<attrdef>Urban female main workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_CULT</attrlabl>
+<attrdef>Total urban Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_CULT</attrlabl>
+<attrdef>Urban male Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_CULT</attrlabl>
+<attrdef>Urban female Cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_CULT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_AGLB</attrlabl>
+<attrdef>Total urban agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_AGLB</attrlabl>
+<attrdef>Urban male agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_AGLB</attrlabl>
+<attrdef>Urban female agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_AGLB</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_MFHH</attrlabl>
+<attrdef>Total urban Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MFHH</attrlabl>
+<attrdef>Urban male Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">11</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MFHH</attrlabl>
+<attrdef>Urban female Household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MFHH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_OTH_</attrlabl>
+<attrdef>Total urban other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_OTH_</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_OTH_W</attrlabl>
+<attrdef>Urban male other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_OTH_W</attrlabl>
+<attrdef>Urban female other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_OTH_W</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_MRW</attrlabl>
+<attrdef>Total urban Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MRW</attrlabl>
+<attrdef>Urban male Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MRW</attrlabl>
+<attrdef>Urban female Marginal workers other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MRW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_T_MRG_CU</attrlabl>
+<attrdef>Total urban Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_T_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MRG_CU</attrlabl>
+<attrdef>Urban male Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MRG_CU</attrlabl>
+<attrdef>Urban female Marginal workers as cultivators</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MRG_CU</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_T_MRG_AG</attrlabl>
+<attrdef>Total urban Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_T_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MRG_AG</attrlabl>
+<attrdef>Urban male Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">15</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MRG_AG</attrlabl>
+<attrdef>Urban female Marginal workers as agricultural labourers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MRG_AG</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_T_MRG_HH</attrlabl>
+<attrdef>Total urban Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_T_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MRG_HH</attrlabl>
+<attrdef>Urban male Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MRG_HH</attrlabl>
+<attrdef>Urban female Marginal workers household industry workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MRG_HH</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">13</attwidth>
+</attr>
+<attr>
+<attrlabl>U_T_MRG_OT</attrlabl>
+<attrdef>Total urban Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_T_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_MRG_OT</attrlabl>
+<attrdef>Urban male Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">15</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_MRG_OT</attrlabl>
+<attrdef>Urban female Marginal workers as other workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_MRG_OT</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">14</attwidth>
+</attr>
+<attr>
+<attrlabl>U_TOT_NNW</attrlabl>
+<attrdef>Total urban Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_TOT_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">12</attwidth>
+</attr>
+<attr>
+<attrlabl>U_M_NNW</attrlabl>
+<attrdef>Urban male Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_M_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+<attr>
+<attrlabl>U_F_NNW</attrlabl>
+<attrdef>Urban female Non-workers</attrdef>
+<attrdefs>ML InfoMap (Firm : India)</attrdefs>
+<attalias Sync="TRUE">U_F_NNW</attalias>
+<attrtype Sync="TRUE">Number</attrtype>
+<attwidth Sync="TRUE">10</attwidth>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>Tufts University GIS Center</cntorg>
+</cntorgp>
+<cntpos>Data Technician</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>Academic Technology</address>
+<address>16 Dearborn Rd</address>
+<city>Somerville</city>
+<state>MA</state>
+<postal>02144</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>617-627-3380</cntvoice>
+<cntemail>gis-support@elist.tufts.edu</cntemail>
+<hours>Monday - Friday, 9:00 am - 5:00 pm EST-USA</hours>
+</cntinfo>
+</distrib>
+<resdesc>Online Dataset</resdesc>
+<distliab>Although this data is being distributed by Tufts University, no warranty expressed or implied is made by the University as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the University in the use of this data, or related materials.</distliab>
+<stdorder>
+<digform>
+<digtinfo>
+<transize>4.329</transize>
+<dssize Sync="TRUE">4.329</dssize>
+</digtinfo>
+<digtopt>
+<onlinopt>
+<computer>
+<networka>
+<networkr>http://gis.tufts.edu</networkr>
+</networka>
+</computer>
+</onlinopt>
+</digtopt>
+</digform>
+<fees>None</fees>
+<ordering>Web-based distribution only</ordering>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>20130108</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>Tufts University GIS Center</cntorg>
+</cntorgp>
+<cntpos>Data Technician</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>Academic Technology</address>
+<address>16 Dearborn Rd.</address>
+<city>Somerville</city>
+<state>MA</state>
+<postal>02144</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>617-627-3380</cntvoice>
+<cntemail>gis-support@elist.tufts.edu</cntemail>
+<hours>Monday - Friday, 9:00 am - 5:00 pm EST-USA</hours>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+<metextns>
+<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+<metprof>ESRI Metadata Profile</metprof>
+</metextns>
+<langmeta Sync="TRUE">en</langmeta>
+<metextns>
+<onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink>
+<metprof Sync="TRUE">ESRI Metadata Profile</metprof>
+</metextns>
+</metainfo>
+<dataIdInfo>
+<envirDesc Sync="TRUE">Microsoft Windows Vista Version 6.1 (Build 7601) Service Pack 1; ESRI ArcCatalog 9.3.1.4000</envirDesc>
+<dataLang>
+<languageCode Sync="TRUE" value="en"/>
+</dataLang>
+<idCitation>
+<resTitle Sync="TRUE">IndiaStates01</resTitle>
+<presForm>
+<PresFormCd Sync="TRUE" value="005"/>
+</presForm>
+</idCitation>
+<spatRpType>
+<SpatRepTypCd Sync="TRUE" value="001"/>
+</spatRpType>
+<dataExt>
+<geoEle>
+<GeoBndBox esriExtentType="native">
+<westBL Sync="TRUE">68.196831</westBL>
+<eastBL Sync="TRUE">97.409096</eastBL>
+<northBL Sync="TRUE">37.121712</northBL>
+<southBL Sync="TRUE">6.767454</southBL>
+<exTypeCode Sync="TRUE">1</exTypeCode>
+</GeoBndBox>
+</geoEle>
+</dataExt>
+<geoBox esriExtentType="decdegrees">
+<westBL Sync="TRUE">68.196831</westBL>
+<eastBL Sync="TRUE">97.409096</eastBL>
+<northBL Sync="TRUE">37.121712</northBL>
+<southBL Sync="TRUE">6.767454</southBL>
+<exTypeCode Sync="TRUE">1</exTypeCode>
+</geoBox>
+</dataIdInfo>
+<mdLang>
+<languageCode Sync="TRUE" value="en"/>
+</mdLang>
+<mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName>
+<mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer>
+<mdChar>
+<CharSetCd Sync="TRUE" value="004"/>
+</mdChar>
+<mdHrLv>
+<ScopeCd Sync="TRUE" value="005"/>
+</mdHrLv>
+<mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+<distInfo>
+<distributor>
+<distorTran>
+<onLineSrc>
+<orDesc Sync="TRUE">002</orDesc>
+<linkage Sync="TRUE">file://\\rstore2\gisprojects$\GIS_Center_Projects\EnterpriseGIS\Layers\India Base Map\IndiaStates01.shp</linkage>
+<protocol Sync="TRUE">Local Area Network</protocol>
+</onLineSrc>
+<transSize Sync="TRUE">4.329</transSize>
+</distorTran>
+<distorFormat>
+<formatName Sync="TRUE">Shapefile</formatName>
+</distorFormat>
+</distributor>
+</distInfo>
+<refSysInfo>
+<RefSystem>
+<refSysID>
+<identCode Sync="TRUE">GCS_WGS_1984</identCode>
+</refSysID>
+</RefSystem>
+</refSysInfo>
+<spatRepInfo>
+<VectSpatRep>
+<topLvl>
+<TopoLevCd Sync="TRUE" value="001"/>
+</topLvl>
+<geometObjs Name="IndiaStates01">
+<geoObjTyp>
+<GeoObjTypCd Sync="TRUE" value="001"/>
+</geoObjTyp>
+<geoObjCnt Sync="TRUE">197</geoObjCnt>
+</geometObjs>
+</VectSpatRep>
+</spatRepInfo>
+<Esri>
+<SyncDate>20130108</SyncDate>
+<SyncTime>12424300</SyncTime>
+<ModDate>20130108</ModDate>
+<ModTime>12424300</ModTime>
+</Esri>
+<mdDateSt Sync="TRUE">20130108</mdDateSt>
+</metadata>
