@@ -12,14 +12,14 @@ class VizController {
   final float SELECTION_GUI_HEIGHT = 50;
   
 
-  public VizController(String filename, ControlP5 _cp5){
+  public VizController(String filename, String state_filename, ControlP5 _cp5){
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
     ControlFont cp5font = new ControlFont(pfont);
     cp5.setControlFont(cp5font);
 
-    districts = new DistrictCollection(filename);
+    districts = new DistrictCollection(filename, state_filename);
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames,
                                              districts.stateNames);
     graph = new Graph(50, 75, 650, 650);
