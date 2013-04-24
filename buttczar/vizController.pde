@@ -52,7 +52,7 @@ class VizController {
 
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
     
-    old_selected_districts = new_selected_districts;
+    /*old_selected_districts = new_selected_districts;
     new_selected_districts = graph.getSelectedDistrictNames();
     Boolean districtsEqual = true;
     if (old_selected_districts.size() == new_selected_districts.size()) {
@@ -73,9 +73,9 @@ class VizController {
     }
     else {
       map.drawImage();
-    }
+    }*/
 
-/*
+    ArrayList selected_districts = graph.getSelectedDistrictNames();
     if (selected_districts.size() != 0) {
       selected_districts = districts.getIDsFromNames(selected_districts);
       map.updateSelectedDistricts(selected_districts);
@@ -84,7 +84,7 @@ class VizController {
       selected_districts = new ArrayList();
     } 
     map.updateSelectedDistricts(selected_districts);
-    map.draw();*/
+    map.draw();
 
     prev_x_col_idx = x_column_idx;
     prev_y_col_idx = y_column_idx;
