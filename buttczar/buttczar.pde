@@ -6,6 +6,7 @@ VizController vController;
 ControlP5 cp5;
 
 void setup() {
+  smooth();
   size(1300, 800);
   cp5 = new ControlP5(this);
   vController = new VizController(INPUT_FILENAME, STATE_FILENAME, cp5, this);
