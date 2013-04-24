@@ -1,6 +1,6 @@
 import controlP5.*;
 
-class GraphController {
+class VizController {
 
   DistrictCollection districts;
   Graph graph;
@@ -10,7 +10,7 @@ class GraphController {
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
 
-  public GraphController(String filename, ControlP5 _cp5){
+  public VizController(String filename, ControlP5 _cp5){
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
