@@ -5,6 +5,7 @@ import net.divbyzero.gpx.parser.*;
 class IndiaMap {
   PGraphics canvas;
   //HashMap<Integer, Object> stateColors;
+  HashMap<Integer, Polygons> districtsToHighlight;
   ArrayList selectedDistricts;
   int x,y,w,h;
   BoundingBox boundary;
@@ -32,6 +33,17 @@ class IndiaMap {
   public void draw() {
     states.project(app);
     //districts.project(app);
+    districtsToHighlight = districts.getPolygonsWithId("DISTRICT_I");
+    if (selectedDistricts.size() != 0) {
+      Polygons temp;
+      fill(0, 100, 0);
+      for (int i = 0; i < selectedDistricts.size(); i++) {
+        temp = districtsToHighlight.get((Integer)selectedDistricts.get(i));
+        temp.project(app);
+      }
+      noFill();
+    }
+    
   }
 
 }
