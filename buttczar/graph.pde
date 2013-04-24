@@ -97,15 +97,20 @@ class Graph {
     stroke(100,0,0);
     fill(0,0,0);
     text("Scale:", width-2*axis_w, y - max_radius+5);
-    text(formatter.format(zmax*.8) + " = ", width-2*axis_w, y-max_radius+25);
-    text(formatter.format(zmax*.2) + " = ", width-2*axis_w, y-max_radius+70);
-//    ellipse(width-2*axis_w, y+25, sqrt(sq(max_radius)*(zmax / zmax)),
-  //                      sqrt(sq(max_radius)*(zmax / zmax)));
-    noFill();
-    ellipse(width-2*axis_w+65, y-max_radius+25, sqrt(sq(max_radius)*.8),
+    if (zmax == 0) {
+      text(formatter.format(zmax*.2) + " = ", width-2*axis_w, y-max_radius+25);
+      noFill();
+      ellipse(width-2*axis_w+30, y-max_radius+25, min_radius, min_radius);
+    }
+    else {
+      text(formatter.format(zmax*.8) + " = ", width-2*axis_w, y-max_radius+25);
+      text(formatter.format(zmax*.2) + " = ", width-2*axis_w, y-max_radius+70);
+      noFill();
+      ellipse(width-2*axis_w+65, y-max_radius+25, sqrt(sq(max_radius)*.8),
                             sqrt(sq(max_radius)*.8));
-    ellipse(width-2*axis_w+65, y-max_radius+70, sqrt(sq(max_radius)*.2),
+      ellipse(width-2*axis_w+65, y-max_radius+70, sqrt(sq(max_radius)*.2),
                             sqrt(sq(max_radius)*.2));
+    }
     strokeWeight(1);
     stroke(0);
   }
@@ -191,6 +196,7 @@ class Graph {
     float yaxis = plotx;
     for (int i = 0; i < locs.length; i++) {
       locs[i] = yaxis + (plotw*(xs[i]/xmax));
+      if (xmax == 0) locs[i] = yaxis;
     }
     return locs;
   }
@@ -200,6 +206,7 @@ class Graph {
     float xaxis = y + ploth;
     for (int i = 0; i < locs.length; i++) {
       locs[i] = xaxis - (ploth*(ys[i]/ymax));
+      if (ymax == 0) locs[i] = xaxis;
     }
     return locs;
   }
@@ -208,7 +215,7 @@ class Graph {
     float[] radii = new float[zs.length];
     for (int i = 0; i < radii.length; i++) {
       radii[i] = sqrt(sq(max_radius)*(zs[i]/zmax));
-      if (radii[i] < min_radius) {
+      if (radii[i] < min_radius || zmax == 0) {
         radii[i] = min_radius;
       }
     }
