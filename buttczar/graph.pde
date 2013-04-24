@@ -73,7 +73,8 @@ class Graph {
     int intersectionID = -1;
     if (mousePressed) {
       selected_districts.clear();
-      // TODO draw dragged over area rect
+      rect(drag_start_x,drag_start_y,mouseX - drag_start_x,
+          mouseY - drag_start_y);
     }
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
