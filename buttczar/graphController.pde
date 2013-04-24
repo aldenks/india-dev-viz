@@ -37,7 +37,7 @@ class VizController {
     graph.draw();
     // getSelectedDistrictNames() must be called after graph.draw()
     ArrayList selected_districts = graph.getSelectedDistrictNames();
-    println(selected_districts);
+    //println(selected_districts);
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
   }
 
