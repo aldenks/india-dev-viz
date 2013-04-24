@@ -13,12 +13,7 @@ class VizController {
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
 
-<<<<<<< HEAD
-
   public VizController(String filename, String state_filename, ControlP5 _cp5, PApplet a){
-=======
-  public VizController(String filename, String state_filename, ControlP5 _cp5){
->>>>>>> 353753a60f058296622b5943aeb5611869a95b16
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
@@ -47,19 +42,17 @@ class VizController {
     }
     graph.draw();
     // getSelectedDistrictNames() must be called after graph.draw()
-    ArrayList selected_districts = graph.getSelectedDistrictNames();
     //println(selected_districts);
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
-<<<<<<< HEAD
+    ArrayList selected_districts = graph.getSelectedDistrictNames();
+    //map.updateSelectedDistricts(selected_districts);
     map.draw();
-=======
 
     prev_x_col_idx = x_column_idx;
     prev_y_col_idx = y_column_idx;
     prev_z_col_idx = z_column_idx;
     prev_state     = selected_state;
 
->>>>>>> 353753a60f058296622b5943aeb5611869a95b16
   }
 
   void mousePressed() { graph.mousePressed(); }

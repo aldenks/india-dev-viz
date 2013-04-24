@@ -18,14 +18,20 @@ class IndiaMap {
     x = _x; y = _y; h = _h; w = _w;
     canvas = createGraphics(w, h);
     boundary = new BoundingBox(36, 97, 6, 68); 
+    boundary = new BoundingBox(48, 105, -2, 15); 
     states   = new Polygons(boundary, dataPath("shapes/states.shp"));
+    states.setLocalSimplificationThreshold(.01);
     districts = new Polygons(boundary, dataPath("shapes/districts.shp"));
     app = a; 
   }
 
+  public void updateSelectedDistricts(ArrayList d) {
+    selectedDistricts = d;
+  }
+
   public void draw() {
     states.project(app);
-    districts.project(app);
+    //districts.project(app);
   }
 
 }
