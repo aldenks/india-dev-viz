@@ -123,9 +123,9 @@ class Graph {
   void drawToolTip(int index) {
     float xPadding = 5;
     float strLen   = textWidth(names[index]);
-    String xName   = lx + " : " + formatter.format(xlocs[index]);
-    String yName   = ly + " : " + formatter.format(ylocs[index]);
-    String zName   = lz + " : " + formatter.format(zrad[index]);
+    String xName   = lx + " : " + formatter.format(xs[index]);
+    String yName   = ly + " : " + formatter.format(ys[index]);
+    String zName   = lz + " : " + formatter.format(zs[index]);
     float[] allLengths = new float[4];
     allLengths[0]      = strLen;
     allLengths[1]      = textWidth(xName);
