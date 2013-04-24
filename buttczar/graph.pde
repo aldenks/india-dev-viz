@@ -1,15 +1,17 @@
 import java.text.DecimalFormat;
+import java.util.Arrays;
 
 class Graph {
   float[] xs, ys, zs;
   float[] xlocs, ylocs, zrad;
-  String lx, ly;
+  String lx, ly, lz;
   String[] names;
   float xmax, ymax, zmax;
   float axis_w;
   float x,y,h,w;
   float plotx, ploty, ploth, plotw;
   float max_radius, min_radius;
+  DecimalFormat formatter;
 
   ArrayList selected_districts;
   float drag_start_x, drag_start_y;
@@ -24,6 +26,7 @@ class Graph {
     plotx = x+axis_w; ploty = y;
     ploth = h-axis_w; plotw = w-axis_w;
     selected_districts = new ArrayList();
+    formatter = new DecimalFormat("#,##0.0");
   }
 
   void draw() {
@@ -38,7 +41,6 @@ class Graph {
     textAlign(CENTER, CENTER);
     text(ly, x+10, y+(ploth/2.0));
 
-    DecimalFormat formatter = new DecimalFormat("#,##0.0");
     // y value labels
     int num_y_labels = 5;
     float v = ((float)ymax)/num_y_labels;
@@ -120,32 +122,45 @@ class Graph {
 
   void drawToolTip(int index) {
     float xPadding = 5;
-    float strLen = textWidth(names[index]);
+    float strLen   = textWidth(names[index]);
+    String xName   = lx + " : " + formatter.format(xlocs[index]);
+    String yName   = ly + " : " + formatter.format(ylocs[index]);
+    String zName   = lz + " : " + formatter.format(zrad[index]);
+    float[] allLengths = new float[4];
+    allLengths[0]      = strLen;
+    allLengths[1]      = textWidth(xName);
+    allLengths[2]      = textWidth(yName);
+    allLengths[3]      = textWidth(zName);
+    Arrays.sort(allLengths);
+    strLen = allLengths[3];
     fill(#002b36);
-    rect(mouseX, mouseY, strLen + 2*xPadding, -15);
+    rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
     textAlign(LEFT,BOTTOM);
     fill(#93a1a1);
-    text(names[index],mouseX + xPadding,mouseY);
+    text(names[index],mouseX + xPadding,mouseY - 15*3);
+    text(xName, mouseX + xPadding,mouseY - 15*2);
+    text(yName, mouseX + xPadding,mouseY - 15);
+    text(zName, mouseX + xPadding,mouseY);
     textAlign(CENTER,CENTER); //KEEP THIS HERE
     noFill();
   }
 
 
   void setVariables (String[][] data) {
-    xs = new float [data[1].length-1];
-    ys = new float [data[1].length-1];
-    zs = new float [data[1].length-1];
+    xs    = new float [data[1].length-1];
+    ys    = new float [data[1].length-1];
+    zs    = new float [data[1].length-1];
     xlocs = new float [data[1].length-1];
     ylocs = new float [data[1].length-1];
-    zrad = new float [data[1].length-1];
+    zrad  = new float [data[1].length-1];
     names = new String [data[1].length-1];
     for (int i=0; i<data[1].length-1; i++) {
-      xs[i] = float(data[1][1+i]);
-      ys[i] = float(data[2][1+i]);
-      zs[i] = float(data[3][1+i]);
+      xs[i]    = float(data[1][1+i]);
+      ys[i]    = float(data[2][1+i]);
+      zs[i]    = float(data[3][1+i]);
       names[i] = data[0][1+i] + ", " + data[4][1+i];
     }
-    lx = data[1][0]; ly = data[2][0];
+    lx = data[1][0]; ly = data[2][0]; lz = data[3][0];
     xmax = 0; ymax = 0; zmax = 0;
     for (int i = 0; i < xs.length; i++) {
       if (xs[i] > xmax) xmax = xs[i];
