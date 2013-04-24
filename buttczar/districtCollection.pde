@@ -172,21 +172,18 @@ class DistrictCollection {
     return columns;
   }
 
-<<<<<<< HEAD
-    ArrayList getIDsFromNames(ArrayList names) {
-      ArrayList IDs = new ArrayList();
-      String name; 
-      for (int i = 0; i < names.size(); i++) {
+  ArrayList getIDsFromNames(ArrayList names) {
+    ArrayList IDs = new ArrayList();
+    String name; 
+    for (int i = 0; i < names.size(); i++) {
         name = (String)names.get(i);
         IDs.add(districts.get(name).ID);
-      }
-      return IDs;
     }
+    return IDs;
+  }
 
-=======
   public HashMap<String, Integer> getStateToID(){
     return stateNameToID;
   }
->>>>>>> 699ae7e8d3ad0d2262198824b3ba806aac37a7d2
 
 }
