@@ -74,7 +74,7 @@ class Graph {
       selected_districts.clear();
       stroke(0, 43, 54, 100);
       strokeWeight(1);
-      fill(0, 43, 54, 20); 
+      fill(0, 43, 54, 20);
       rect(drag_start_x,drag_start_y,mouseX - drag_start_x,
           mouseY - drag_start_y);
     }
@@ -147,13 +147,14 @@ class Graph {
     strLen = allLengths[3];
     fill(#002b36);
     if (mouseY < y+30) {
-      rect(mouseX, mouseY, strLen + 2*xPadding, (15)*4);
+      float addX = 10;
+      rect(mouseX + addX, mouseY, strLen + 2*xPadding, (15)*4);
       textAlign(LEFT,BOTTOM);
       fill(#FFFFFF);
-      text(names[index],mouseX + xPadding,mouseY + 15*3);
-      text(xName, mouseX + xPadding,mouseY + 15*2);
-      text(yName, mouseX + xPadding,mouseY + 15);
-      text(zName, mouseX + xPadding,mouseY+ 60);
+      text(names[index],mouseX + xPadding + addX,mouseY + 15);
+      text(xName, mouseX + xPadding + addX,mouseY + 15*2);
+      text(yName, mouseX + xPadding + addX,mouseY + 15*3);
+      text(zName, mouseX + xPadding + addX,mouseY+ 15*4);
     }
     else {
       rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
