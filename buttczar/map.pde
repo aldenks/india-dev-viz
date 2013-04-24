@@ -17,6 +17,6 @@ class IndiaMap {
     x = _x; y = _y; h = _h; w = _w;
     canvas = createGraphics(w, h);
     boundary = new BoundingBox(36, 97, 6, 68); 
-    states   = new Polygons(boundary, dataPath("/shapes/states.shp"));
+   // states   = new Polygons(boundary, dataPath("/shapes/states.shp"));
   } 
 }
