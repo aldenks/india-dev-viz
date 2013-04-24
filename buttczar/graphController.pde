@@ -6,9 +6,11 @@ class VizController {
   Graph graph;
   ControlP5 cp5;
   DropdownSelectGroup dropdowns;
+  IndiaMap map; 
 
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
+  
 
   public VizController(String filename, ControlP5 _cp5){
     cp5 = _cp5;
@@ -21,6 +23,7 @@ class VizController {
     dropdowns = new DropdownSelectGroup(cp5, districts.variableNames,
                                              districts.stateNames);
     graph = new Graph(50, 75, 650, 650);
+    map = new IndiaMap(650, 400, 100, 100);
   }
 
   public void draw() {

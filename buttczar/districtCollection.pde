@@ -165,4 +165,15 @@ class DistrictCollection {
     return columns;
   }
 
+    ArrayList getIDsFromNames(ArrayList names) {
+      ArrayList IDs = new ArrayList();
+      String name; 
+      for (int i = 0; i < names.size(); i++) {
+        name = (String)names.get(i);
+        IDs.add(districts.get(name).ID);
+      }
+      return IDs;
+    }
+
+
 }

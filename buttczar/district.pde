@@ -1,6 +1,7 @@
 class District {
   public String name;
   public String state;
+  int ID;
   String data[];
   HashMap<String, Integer> variables;
 
@@ -11,6 +12,7 @@ class District {
     variables = _variables;
     name = _name;
     state = _state;
+    ID = int(data[data.length-1]);
   }
 
   public float getVariable(String variable) {
