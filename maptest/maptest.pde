@@ -28,7 +28,7 @@ void setup() {
   india.setColourScale(color(83,27,94),color(71,58,42),15);
   
   
-  test = d.getPolygonsWithId("DISTRICT_I");
+  test = india.getPolygonsWithId("STATE_ID");
   jharkhand = test.get(20);
   
   println("---------------");

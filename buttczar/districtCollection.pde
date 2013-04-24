@@ -185,5 +185,9 @@ class DistrictCollection {
   public HashMap<String, Integer> getStateToID(){
     return stateNameToID;
   }
+  
+  public int getStateIDFromName(String name) {
+    return (int)(stateNameToID.get(name));
+  }
 
 }
