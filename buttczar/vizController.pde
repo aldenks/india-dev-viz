@@ -7,12 +7,18 @@ class VizController {
   ControlP5 cp5;
   DropdownSelectGroup dropdowns;
   IndiaMap map;
+  int prev_x_col_idx, prev_y_col_idx, prev_z_col_idx;
+  String prev_state;
 
   // constants
   final float SELECTION_GUI_HEIGHT = 50;
 
+<<<<<<< HEAD
 
   public VizController(String filename, String state_filename, ControlP5 _cp5, PApplet a){
+=======
+  public VizController(String filename, String state_filename, ControlP5 _cp5){
+>>>>>>> 353753a60f058296622b5943aeb5611869a95b16
     cp5 = _cp5;
     PFont pfont = createFont("Arial", 12);
     textFont(pfont);
@@ -27,19 +33,33 @@ class VizController {
   }
 
   public void draw() {
-    int x_column_idx = dropdowns.selectedXIndex();
-    int y_column_idx = dropdowns.selectedYIndex();
-    int z_column_idx = dropdowns.selectedZIndex();
+    int x_column_idx      = dropdowns.selectedXIndex();
+    int y_column_idx      = dropdowns.selectedYIndex();
+    int z_column_idx      = dropdowns.selectedZIndex();
     String selected_state = dropdowns.selectedStateName();
-    String[][] selectedData = districts.getColumnsForState(x_column_idx,
+
+    if(x_column_idx != prev_x_col_idx || y_column_idx != prev_y_col_idx ||
+        z_column_idx != prev_z_col_idx || prev_state != selected_state){
+
+      String[][] selectedData = districts.getColumnsForState(x_column_idx,
                              y_column_idx, z_column_idx, selected_state);
-    graph.setVariables(selectedData);
+      graph.setVariables(selectedData);
+    }
     graph.draw();
     // getSelectedDistrictNames() must be called after graph.draw()
     ArrayList selected_districts = graph.getSelectedDistrictNames();
     //println(selected_districts);
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
+<<<<<<< HEAD
     map.draw();
+=======
+
+    prev_x_col_idx = x_column_idx;
+    prev_y_col_idx = y_column_idx;
+    prev_z_col_idx = z_column_idx;
+    prev_state     = selected_state;
+
+>>>>>>> 353753a60f058296622b5943aeb5611869a95b16
   }
 
   void mousePressed() { graph.mousePressed(); }
