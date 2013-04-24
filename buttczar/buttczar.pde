@@ -15,6 +15,9 @@ void draw() {
   vController.draw();
 }
 
+void mousePressed() { gController.mousePressed(); }
+void mouseClicked() { gController.mouseClicked(); }
+
 // ControlP5 event handler, delegates events to interested objects
 public void controlEvent(ControlEvent e) {
   if (e.isGroup()) {

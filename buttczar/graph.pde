@@ -13,6 +13,9 @@ class Graph {
   float max_radius, min_radius;
   DecimalFormat formatter;
 
+  ArrayList selected_districts;
+  float drag_start_x, drag_start_y;
+
   //take in 2d string array
 
   public Graph(float _x, float _y, float _w, float _h) {
@@ -22,6 +25,7 @@ class Graph {
     x = _x; y = _y; h = _h; w = _w;
     plotx = x+axis_w; ploty = y;
     ploth = h-axis_w; plotw = w-axis_w;
+    selected_districts = new ArrayList();
     formatter = new DecimalFormat("#,##0.0");
   }
 
@@ -67,12 +71,20 @@ class Graph {
     float dist = 0;
     float smallestDist = Float.MAX_VALUE;
     int intersectionID = -1;
+    if (mousePressed) {
+      selected_districts.clear();
+      // TODO draw dragged over area rect
+    }
     for (int i = 0; i < xlocs.length; i++) {
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
       dist = intersectionDist(i);
       if (dist < smallestDist) {
         smallestDist = dist;
         intersectionID = i;
+      }
+      if (mousePressed && inRect(xlocs[i], ylocs[i],
+                          drag_start_x, drag_start_y, mouseX, mouseY)) {
+        selected_districts.add(names[i]);
       }
     }
 
@@ -189,5 +201,36 @@ class Graph {
       }
     }
     return radii;
+  }
+
+  void mousePressed() {
+    drag_start_x = mouseX;
+    drag_start_y = mouseY;
+  }
+  void mouseClicked() {
+    selected_districts.clear();
+  }
+
+  // returns true if the point (pt_*) is in the rectangle
+  // rectangle points 1 and 2 can be anywhere relative to each other
+  boolean inRect(float pt_x, float pt_y,
+                 float x1, float y1, float x2, float y2) {
+    boolean x_in_bounds, y_in_bounds;
+    x_in_bounds = y_in_bounds = false;
+    if (x1 < x2) {
+      x_in_bounds = x1 < pt_x && pt_x < x2;
+    } else {
+      x_in_bounds = x2 < pt_x && pt_x < x1;
+    }
+    if (y1 < y2) {
+      y_in_bounds = y1 < pt_y && pt_y < y2;
+    } else {
+      y_in_bounds = y2 < pt_y && pt_y < y1;
+    }
+    return x_in_bounds && y_in_bounds;
+  }
+
+  ArrayList getSelectedDistrictNames() {
+    return selected_districts;
   }
 }

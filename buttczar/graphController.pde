@@ -32,8 +32,14 @@ class VizController {
                              y_column_idx, z_column_idx, selected_state);
     graph.setVariables(selectedData);
     graph.draw();
+    // getSelectedDistrictNames() must be called after graph.draw()
+    ArrayList selected_districts = graph.getSelectedDistrictNames();
+    println(selected_districts);
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
   }
+
+  void mousePressed() { graph.mousePressed(); }
+  void mouseClicked() { graph.mouseClicked(); }
 
   // ControlP5 event handler, delegates events to interested objects
   public void controlEvent(ControlEvent e) {
