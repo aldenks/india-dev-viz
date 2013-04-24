@@ -16,15 +16,6 @@ class IndiaMap {
     //stateColors = _stateColors;
     x = _x; y = _y; h = _h; w = _w;
     canvas = createGraphics(w, h);
-<<<<<<< HEAD
     boundary = new BoundingBox(36, 97, 6, 68);
-    fill(0,0,0);
-    rect(x,y,w,h);
-   // states   = new Polygons(boundary, dataPath("/shapes/states.shp"));
   }
-=======
-    boundary = new BoundingBox(36, 97, 6, 68); 
-    //states   = new Polygons(boundary, dataPath("shapes/states.shp"));
-  } 
->>>>>>> 3d23d20b81c7ba76fd069b57038ed7420fa0d6ba
 }
