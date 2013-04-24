@@ -135,11 +135,10 @@ class Graph {
     Arrays.sort(allLengths);
     strLen = allLengths[3];
     fill(#002b36);
-<<<<<<< HEAD
     if (mouseY < y+30) {
       rect(mouseX, mouseY, strLen + 2*xPadding, (15)*4);
       textAlign(LEFT,BOTTOM);
-      fill(#93a1a1);
+      fill(#FFFFFF);
       text(names[index],mouseX + xPadding,mouseY + 15*3);
       text(xName, mouseX + xPadding,mouseY + 15*2);
       text(yName, mouseX + xPadding,mouseY + 15);
@@ -148,21 +147,12 @@ class Graph {
     else {
       rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
       textAlign(LEFT,BOTTOM);
-      fill(#93a1a1);
+      fill(#FFFFFF);
       text(names[index],mouseX + xPadding,mouseY - 15*3);
       text(xName, mouseX + xPadding,mouseY - 15*2);
       text(yName, mouseX + xPadding,mouseY - 15);
       text(zName, mouseX + xPadding,mouseY);
     }
-=======
-    rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
-    textAlign(LEFT,BOTTOM);
-    fill(#FFFFFF);
-    text(names[index],mouseX + xPadding,mouseY - 15*3);
-    text(xName, mouseX + xPadding,mouseY - 15*2);
-    text(yName, mouseX + xPadding,mouseY - 15);
-    text(zName, mouseX + xPadding,mouseY);
->>>>>>> f00cea30b5529b88900d0562e0bd1795b5310b0f
     textAlign(CENTER,CENTER); //KEEP THIS HERE
     noFill();
   }
