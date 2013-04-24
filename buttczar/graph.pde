@@ -136,7 +136,7 @@ class Graph {
     fill(#002b36);
     rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
     textAlign(LEFT,BOTTOM);
-    fill(#93a1a1);
+    fill(#FFFFFF);
     text(names[index],mouseX + xPadding,mouseY - 15*3);
     text(xName, mouseX + xPadding,mouseY - 15*2);
     text(yName, mouseX + xPadding,mouseY - 15);
