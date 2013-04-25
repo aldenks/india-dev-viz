@@ -54,7 +54,7 @@ class DropdownSelectGroup {
             .addItem("", 0);
 
         TOTAL_WIDTH = 4*SINGLE_SELECT_WIDTH + 4*LABEL_WIDTH + 3*PADDING;
-        circles_label_img = loadImage("../img/concentric_circles.png");
+        circles_label_img = loadImage("img/concentric_circles.png");
 
         helpButton = new Button(cp5, " Help")
                            .setWidth(47)
