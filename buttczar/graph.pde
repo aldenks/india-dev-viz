@@ -179,24 +179,48 @@ class Graph {
     Arrays.sort(allLengths);
     strLen = allLengths[3];
     fill(#002b36);
-    if (mouseY < y+30) {
-      float addX = 10;
-      rect(mouseX + addX, mouseY, strLen + 2*xPadding, (15)*4);
-      textAlign(LEFT,BOTTOM);
-      fill(#FFFFFF);
-      text(names[index],mouseX + xPadding + addX,mouseY + 15);
-      text(xName, mouseX + xPadding + addX,mouseY + 15*2);
-      text(yName, mouseX + xPadding + addX,mouseY + 15*3);
-      text(zName, mouseX + xPadding + addX,mouseY+ 15*4);
+    if(mouseX > (x+w)/2) {
+      float text_width = strLen;
+      if (mouseY < y+30) {
+        float addX = 10;
+        rect(mouseX + addX - text_width, mouseY, strLen + 2*xPadding, (15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding + addX - text_width,mouseY + 15);
+        text(xName, mouseX + xPadding + addX - text_width,mouseY + 15*2);
+        text(yName, mouseX + xPadding + addX - text_width,mouseY + 15*3);
+        text(zName, mouseX + xPadding + addX - text_width,mouseY+ 15*4);
+      }
+      else {
+        rect(mouseX - text_width, mouseY, strLen + 2*xPadding, (-15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding - text_width,mouseY - 15*3);
+        text(xName, mouseX + xPadding - text_width,mouseY - 15*2);
+        text(yName, mouseX + xPadding - text_width,mouseY - 15);
+        text(zName, mouseX + xPadding - text_width,mouseY);
+      }
     }
     else {
-      rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
-      textAlign(LEFT,BOTTOM);
-      fill(#FFFFFF);
-      text(names[index],mouseX + xPadding,mouseY - 15*3);
-      text(xName, mouseX + xPadding,mouseY - 15*2);
-      text(yName, mouseX + xPadding,mouseY - 15);
-      text(zName, mouseX + xPadding,mouseY);
+      if (mouseY < y+30) {
+        float addX = 10;
+        rect(mouseX + addX, mouseY, strLen + 2*xPadding, (15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding + addX,mouseY + 15);
+        text(xName, mouseX + xPadding + addX,mouseY + 15*2);
+        text(yName, mouseX + xPadding + addX,mouseY + 15*3);
+        text(zName, mouseX + xPadding + addX,mouseY+ 15*4);
+      }
+      else {
+        rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding,mouseY - 15*3);
+        text(xName, mouseX + xPadding,mouseY - 15*2);
+        text(yName, mouseX + xPadding,mouseY - 15);
+        text(zName, mouseX + xPadding,mouseY);
+      }
     }
     textAlign(CENTER,CENTER); //KEEP THIS HERE
     noFill();
