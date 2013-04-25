@@ -69,8 +69,6 @@ class IndiaMap {
 
   public void draw() {
     Polygons temp;
-    //allStates.project(app);
-
     stroke(50);
     for (int i = 0; i < states.length; i++) {
       fill(colors[i]);
@@ -78,6 +76,8 @@ class IndiaMap {
       temp.project(app);
     }
 
+<<<<<<< HEAD
+=======
     //districts.project(app);
     /*if (selectedDistricts.size() != 0) {
       fill(0, 43, 54, 250);
@@ -88,6 +88,7 @@ class IndiaMap {
       noFill();
     }*/
 
+>>>>>>> 5f3429c305f70a4f60e243ec4de4267abdc6aae7
     strokeWeight(.25);
     fill(color(0, 43, 54));
     stroke(200);
@@ -98,7 +99,6 @@ class IndiaMap {
     noFill();
     stroke(0);
     strokeWeight(1);
-
 
     currentMap = get(765, 110, 495, 585);
   }
