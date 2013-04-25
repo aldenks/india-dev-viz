@@ -20,7 +20,7 @@ class DropdownSelectGroup {
     PImage circles_label_img;
 
     final float TOTAL_WIDTH;
-    static final int SINGLE_SELECT_WIDTH = 170;
+    static final int SINGLE_SELECT_WIDTH = 175;
     static final int LABEL_WIDTH = 32;
     static final int ITEM_HEIGHT = 20;
     static final int PADDING = 20;
@@ -51,13 +51,14 @@ class DropdownSelectGroup {
         coal_chkbx = cp5.addCheckBox("coal_toggle")
             .setSize(ITEM_HEIGHT, ITEM_HEIGHT)
             .setColorLabel(color(0))
-            .addItem("Only Coal Producers", 0);
+            .addItem("", 0);
 
         TOTAL_WIDTH = 4*SINGLE_SELECT_WIDTH + 4*LABEL_WIDTH + 3*PADDING;
         circles_label_img = loadImage("../img/concentric_circles.png");
 
-        helpButton = new Button(cp5, "Help");
-        helpButton.setSwitch(true);
+        helpButton = new Button(cp5, " Help")
+                           .setWidth(47)
+                           .setSwitch(true);
     }
 
     void draw(float x, float y, float w, float h) {
@@ -70,31 +71,32 @@ class DropdownSelectGroup {
         float dd_y_pos = y_center + (float(ITEM_HEIGHT)/2);
         float x_begin = (float(width)/2) - (TOTAL_WIDTH/2);
         x_begin = x_begin < 0 ? 0 : x_begin;
-        x_begin = 70;
-        coal_chkbx.setPosition(x_begin - 20, dd_y_pos - ITEM_HEIGHT);
-        float dd_begin = x_begin + LABEL_WIDTH;
+        x_begin = 100;
+        coal_chkbx.setPosition(x_begin, dd_y_pos - ITEM_HEIGHT);
+        float dd_begin = x_begin + LABEL_WIDTH + PADDING;
         int item_width = SINGLE_SELECT_WIDTH + PADDING + LABEL_WIDTH;
         dds.setPosition(dd_begin + 0*item_width, dd_y_pos);
         ddx.setPosition(dd_begin + 1*item_width, dd_y_pos);
         ddy.setPosition(dd_begin + 2*item_width, dd_y_pos);
         ddz.setPosition(dd_begin + 3*item_width, dd_y_pos);
         textAlign(RIGHT, CENTER);
+        text("Only Coal",  x_begin - 4, y_center - 9);
+        text("Producers:", x_begin - 4, y_center + 5);
         textSize(18);
         text("X: ", dd_begin + 1*item_width,     y_center - LABEL_NUDGE);
         text("Y: ", dd_begin + 2*item_width,     y_center - LABEL_NUDGE);
         text(  ":", dd_begin + 3*item_width - 2, y_center - LABEL_NUDGE);
-        image(circles_label_img, x_begin + 3*item_width,
+        image(circles_label_img, PADDING + x_begin + 3*item_width,
               y_center - float(circles_label_img.height)/2);
         popStyle();
-
         helpButton.setHeight(ITEM_HEIGHT);
-        helpButton.setPosition(dd_begin + 4*item_width, dd_y_pos - ITEM_HEIGHT);
+        helpButton.setPosition(dd_begin + 4*item_width, dd_y_pos - ITEM_HEIGHT - 1);
         if(helpButton.isPressed()){
           helpButton.setOn();
         }
 
         if(helpButton.isOn()){
-          drawHelpButton(dd_begin+4*item_width, y_center + 40);
+          drawHelpWindow(dd_begin+4*item_width, y_center + 40);
         }
     }
 
@@ -102,6 +104,7 @@ class DropdownSelectGroup {
     int selectedYIndex() { return selected_y_idx; }
     int selectedZIndex() { return selected_z_idx; }
     String selectedStateName() { return state_names[selected_state_idx]; }
+    boolean onlyCoal() { return coal_chkbx.getState(0); }
 
     void controlEvent(ControlEvent e) {
         ControlGroup g = e.getGroup();
@@ -125,7 +128,7 @@ class DropdownSelectGroup {
     }
 
     // x y for where to draw helpbutton
-    void drawHelpButton(float x, float y){
+    void drawHelpWindow(float x, float y){
       String[] help = new String[5];
       help[0] = "Click and drag to select districts (data points).";
       help[1] = "Selected districts will appear on map.";
