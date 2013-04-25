@@ -1,7 +1,7 @@
 import controlP5.*;
 
-final String INPUT_FILENAME = "data/districtsNewLabels.csv";
-final String STATE_FILENAME = "data/states.csv";
+final String INPUT_FILENAME = "./data/districtsNewLabels.csv";
+final String STATE_FILENAME = "./data/states.csv";
 VizController vController;
 ControlP5 cp5;
 
