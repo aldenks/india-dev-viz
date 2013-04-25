@@ -40,7 +40,12 @@ class Graph {
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
     textAlign(CENTER, CENTER);
-    text(ly, x+10, y+(ploth/2.0));
+    
+    pushMatrix();
+    translate(x,y+(ploth/2.0));
+    rotate(-HALF_PI);
+    text(ly, x-50, y - axis_w-40);
+    popMatrix();
 
     // y value labels
     int num_y_labels = 5;
