@@ -25,6 +25,7 @@ class DropdownSelectGroup {
     static final int PADDING = 20;
     static final int LABEL_NUDGE = 3;
     private boolean first_run = true;
+    Button helpButton;
 
     public DropdownSelectGroup(ControlP5 cp5, String[] column_names,
                                String[] _state_names) {
@@ -48,6 +49,9 @@ class DropdownSelectGroup {
         customizeDropdown(dds);
         TOTAL_WIDTH = 4*SINGLE_SELECT_WIDTH + 4*LABEL_WIDTH + 3*PADDING;
         circles_label_img = loadImage("../img/concentric_circles.png");
+
+        helpButton = new Button(cp5, "Help");
+        helpButton.setSwitch(true);
     }
 
     void draw(float x, float y, float w, float h) {
@@ -74,6 +78,16 @@ class DropdownSelectGroup {
         image(circles_label_img, x_begin + 3*item_width,
               y_center - float(circles_label_img.height)/2);
         popStyle();
+
+        helpButton.setHeight(ITEM_HEIGHT);
+        helpButton.setPosition(dd_begin + 4*item_width, dd_y_pos - ITEM_HEIGHT);
+        if(helpButton.isPressed()){
+          helpButton.setOn();
+        }
+
+        if(helpButton.isOn()){
+          drawHelpButton(dd_begin+4*item_width, y_center + 40);
+        }
     }
 
     int selectedXIndex() { return selected_x_idx; }
@@ -100,5 +114,29 @@ class DropdownSelectGroup {
             .setItemHeight(ITEM_HEIGHT)
             .toUpperCase(false);
         d.captionLabel().style().marginTop = 2;
+    }
+
+    // x y for where to draw helpbutton
+    void drawHelpButton(float x, float y){
+      String[] help = new String[5];
+      help[0] = "Click and drag to select districts (data points).";
+      help[1] = "Selected districts will appear on map.";
+      help[2] = "Click again to deselect districts.";
+      help[3] = "Select variables to view in dropdowns.";
+      help[4] = " ";
+      float rect_width = textWidth(help[0]);
+      float line_height = 15;
+      float x_padding = 10;
+      float y_padding = 5;
+      fill(#002b36);
+      rect(x - rect_width/2,y,rect_width+2*x_padding,
+          line_height*5 + 2*y_padding);
+      textAlign(LEFT,BOTTOM);
+      fill(#FFFFFF);
+      text(help[0], x+x_padding - rect_width/2, y + line_height + y_padding);
+      text(help[1], x+x_padding - rect_width/2, y + line_height*2 + y_padding);
+      text(help[2], x+x_padding - rect_width/2, y + line_height*3 + y_padding);
+      text(help[3], x+x_padding - rect_width/2, y + line_height*4 + y_padding);
+      text(help[4], x+x_padding - rect_width/2, y + line_height*5 + y_padding);
     }
 }
