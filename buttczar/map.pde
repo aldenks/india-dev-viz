@@ -13,11 +13,13 @@ class IndiaMap {
   BoundingBox boundary;
   Polygons allStates;
   Polygons districts;
+  HashMap<String, Polygons> nameToDistrict;
+  Polygons[] idToDistrict;
   PApplet app; 
   PImage currentMap; 
   final int NUMBER_OF_STATES = 35;
 
-  public IndiaMap(HashMap<String, Integer> _colors, PApplet a) {
+  public IndiaMap(HashMap<String, Integer> _colors, PApplet a, HashMap<String, District> distNames) {
     stateColors = _colors;
     app = a; 
     boundary = new BoundingBox(48, 105, -2, 15); 
@@ -25,6 +27,7 @@ class IndiaMap {
     allStates   = new Polygons(boundary, dataPath("shapes/states.shp"));
     allStates.setLocalSimplificationThreshold(.01);
     districts = new Polygons(boundary, dataPath("shapes/districts.shp"));
+    districts.setLocalSimplificationThreshold(0.1);
     districtsToHighlight = districts.getPolygonsWithId("DISTRICT_I");
 
     Polygons temp;
@@ -39,10 +42,22 @@ class IndiaMap {
       name = (String)state.getKey();
       c = (Integer)state.getValue();
       temp = new Polygons(boundary, 
-                 allStates.getMultipleFeaturesById( "NAME", name));
+                 allStates.getMultipleFeaturesById("NAME", name));
       states[i] = temp;
       colors[i] = c; 
       i++;
+    }
+
+    idToDistrict = new Polygons[3605];
+    nameToDistrict = new HashMap(distNames.size());
+    iter = distNames.entrySet().iterator();
+    while (iter.hasNext()) {
+      Map.Entry district = (Map.Entry)iter.next();
+      District d = (District)district.getValue();
+      i = d.ID;
+      name = (String)district.getKey();
+      temp = new Polygons(boundary, districts.getMultipleFeaturesById("NAME", name));
+      idToDistrict[i] = temp;
     }
 
     selectedDistricts = new ArrayList();
@@ -63,14 +78,22 @@ class IndiaMap {
     }
 
     //districts.project(app);
-    if (selectedDistricts.size() != 0) {
+    /*if (selectedDistricts.size() != 0) {
       fill(0, 43, 54, 250); 
       for (int i = 0; i < selectedDistricts.size(); i++) {
         temp = districtsToHighlight.get((Integer)selectedDistricts.get(i));
         temp.project(app);
       }
       noFill();
+    }*/
+
+    fill(color(0, 43, 54));
+    for (int i = 0; i < selectedDistricts.size(); i++) {
+      temp = idToDistrict[(Integer)selectedDistricts.get(i)];
+      temp.project(app);
     }
+    noFill();
+
 
     currentMap = get(765, 110, 495, 585);
   }
