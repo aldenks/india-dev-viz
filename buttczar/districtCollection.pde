@@ -141,9 +141,21 @@ class DistrictCollection {
   }
 
   public String[][] getColumnsForState(int var1, int var2,
-                                       int var3, String state)
+                                       int var3, String state,
+                                       boolean filter_coal)
   {
-    String columns[][] = new String[5][districts.size() + 1];
+    int num_districts = districts.size();
+    if(filter_coal){
+      Iterator iter = districts.entrySet().iterator();
+      while(iter.hasNext()){
+        Map.Entry x = (Map.Entry)iter.next();
+        District d = (District)x.getValue();
+        if(float(d.data[0]) == 0 && float(d.data[1]) == 0){
+          num_districts--;
+        }
+      }
+    }
+    String columns[][] = new String[5][num_districts + 1];
     columns[0][0] = "Name";
     columns[1][0] = indexToVarName[var1];
     columns[2][0] = indexToVarName[var2];
@@ -156,12 +168,14 @@ class DistrictCollection {
       Map.Entry x = (Map.Entry)iter.next();
       District d = (District)x.getValue();
       if (all_states || state.equals(d.state)) {
-        columns[0][i] = (String)x.getKey();
-        columns[1][i] = d.data[var1];
-        columns[2][i] = d.data[var2];
-        columns[3][i] = d.data[var3];
-        columns[4][i] = d.state;
-        i++;
+        if(!filter_coal || (float(d.data[0]) != 0 || float(d.data[1]) != 0)){
+          columns[0][i] = (String)x.getKey();
+          columns[1][i] = d.data[var1];
+          columns[2][i] = d.data[var2];
+          columns[3][i] = d.data[var3];
+          columns[4][i] = d.state;
+          i++;
+        }
       }
     }
     columns[0] = subset(columns[0], 0, i);
@@ -174,7 +188,7 @@ class DistrictCollection {
 
   ArrayList getIDsFromNames(ArrayList names) {
     ArrayList IDs = new ArrayList();
-    String name = ""; 
+    String name = "";
     for (int i = 0; i < names.size(); i++) {
         name = (String)names.get(i);
         IDs.add(districts.get(name).ID);
@@ -185,7 +199,7 @@ class DistrictCollection {
   public HashMap<String, Integer> getStateToID(){
     return stateNameToID;
   }
-  
+
   public int getStateIDFromName(String name) {
     return (int)(stateNameToID.get(name));
   }
