@@ -12,6 +12,7 @@ class VizController {
   DropdownSelectGroup dropdowns;
   IndiaMap map;
   int prev_x_col_idx, prev_y_col_idx, prev_z_col_idx;
+  boolean prev_only_coal = false;
   ArrayList old_selected_districts;
   ArrayList new_selected_districts;
   String prev_state;
@@ -43,12 +44,13 @@ class VizController {
     int y_column_idx      = dropdowns.selectedYIndex();
     int z_column_idx      = dropdowns.selectedZIndex();
     String selected_state = dropdowns.selectedStateName();
+    boolean only_coal     = dropdowns.onlyCoal();
 
     if(x_column_idx != prev_x_col_idx || y_column_idx != prev_y_col_idx ||
-       z_column_idx != prev_z_col_idx || prev_state != selected_state){
+       z_column_idx != prev_z_col_idx || prev_state != selected_state   ||
+       only_coal != prev_only_coal){
       String[][] selectedData = districts.getColumnsForState(x_column_idx,
-          y_column_idx, z_column_idx, selected_state, true);
-      //TODO add actual coal filter to last boolean
+          y_column_idx, z_column_idx, selected_state, only_coal);
       graph.setVariables(selectedData);
     }
     graph.draw();
@@ -57,13 +59,13 @@ class VizController {
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
 
     new_selected_districts = graph.getSelectedDistrictNames();
-    if (old_selected_districts.equals(new_selected_districts)) {
-      map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
-      map.draw();
-    }
-    else {
-      map.drawImage();
-    }
+//    if (old_selected_districts.equals(new_selected_districts)) {
+//      map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
+//      map.draw();
+//    }
+//    else {
+//      map.drawImage();
+//    }
 
     old_selected_districts.clear();
     for (int i = 0; i < new_selected_districts.size(); i++) {
@@ -74,6 +76,7 @@ class VizController {
     prev_y_col_idx = y_column_idx;
     prev_z_col_idx = z_column_idx;
     prev_state     = selected_state;
+    prev_only_coal = only_coal;
   }
 
   void mousePressed() { graph.mousePressed(); }
