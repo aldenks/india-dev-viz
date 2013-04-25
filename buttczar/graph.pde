@@ -17,9 +17,13 @@ class Graph {
   ArrayList selected_districts;
   float drag_start_x, drag_start_y;
 
+  HashMap<String, Integer> stateColors;
+
   //take in 2d string array
 
-  public Graph(float _x, float _y, float _w, float _h) {
+  public Graph(float _x, float _y, float _w, float _h,
+      HashMap<String, Integer> _stateColors ) {
+    stateColors = _stateColors;
     axis_w = 70;
     max_radius = 25;
     min_radius = 5;
@@ -40,7 +44,7 @@ class Graph {
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
     textAlign(CENTER, CENTER);
-    
+
     pushMatrix();
     translate(x,y+(ploth/2.0));
     rotate(-HALF_PI);
@@ -88,6 +92,28 @@ class Graph {
     noFill();
     xlocs = xLocations();
     for (int i = 0; i < xlocs.length; i++) {
+      String state_name = split(names[i],", ")[1];
+      color state_color = (Integer)stateColors.get(state_name);
+      //println(state_name);
+      strokeWeight(2);
+      fill(state_color);
+
+      int alpha   = (state_color >> 24) & 0xFF;
+      int red     = (state_color >> 16) & 0xFF;
+      int green   = (state_color >> 8)  & 0xFF;
+      int blue    = state_color         & 0xFF;
+
+      int shift_color = 0;
+
+      alpha = 255;
+      red   = red   - shift_color;
+      green = green - shift_color;
+      blue  = blue  - shift_color;
+
+      state_color = (alpha << 24) | (red << 16) | (green << 8) | blue;
+
+      stroke(state_color);
+
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
       dist = intersectionDist(i);
       if (dist < smallestDist) {
@@ -99,6 +125,8 @@ class Graph {
         selected_districts.add(districtNames[i]);
       }
     }
+
+    stroke(0, 0, 0, 150);
 
     if (intersectionID != -1) {
       drawToolTip(intersectionID);
