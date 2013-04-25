@@ -7,7 +7,7 @@ class IndiaMap {
   HashMap<String, Integer> stateColors;
   HashMap<Integer, Polygons> districtsToHighlight;
   Polygons[] states;
-  color[] colors; 
+  color[] colors;
   ArrayList selectedDistricts;
   int x,y,w,h;
   BoundingBox boundary;
@@ -15,15 +15,15 @@ class IndiaMap {
   Polygons districts;
   HashMap<String, Polygons> nameToDistrict;
   Polygons[] idToDistrict;
-  PApplet app; 
-  PImage currentMap; 
+  PApplet app;
+  PImage currentMap;
   final int NUMBER_OF_STATES = 35;
 
   public IndiaMap(HashMap<String, Integer> _colors, PApplet a, HashMap<String, District> distNames) {
     stateColors = _colors;
-    app = a; 
-    boundary = new BoundingBox(48, 105, -2, 15); 
-    boundary = new BoundingBox(44, 101, 2, 19); 
+    app = a;
+    boundary = new BoundingBox(48, 105, -2, 15);
+    boundary = new BoundingBox(44, 101, 2, 19);
     allStates   = new Polygons(boundary, dataPath("shapes/states.shp"));
     allStates.setLocalSimplificationThreshold(.01);
     districts = new Polygons(boundary, dataPath("shapes/districts.shp"));
@@ -33,18 +33,18 @@ class IndiaMap {
     Polygons temp;
     states = new Polygons[NUMBER_OF_STATES];
     colors = new color[NUMBER_OF_STATES];
-    int i = 0; 
+    int i = 0;
     Iterator iter = stateColors.entrySet().iterator();
-    color c; 
+    color c;
     String name;
     while (iter.hasNext()) {
       Map.Entry state = (Map.Entry)iter.next();
       name = (String)state.getKey();
       c = (Integer)state.getValue();
-      temp = new Polygons(boundary, 
+      temp = new Polygons(boundary,
                  allStates.getMultipleFeaturesById("NAME", name));
       states[i] = temp;
-      colors[i] = c; 
+      colors[i] = c;
       i++;
     }
 
@@ -79,7 +79,7 @@ class IndiaMap {
 
     //districts.project(app);
     /*if (selectedDistricts.size() != 0) {
-      fill(0, 43, 54, 250); 
+      fill(0, 43, 54, 250);
       for (int i = 0; i < selectedDistricts.size(); i++) {
         temp = districtsToHighlight.get((Integer)selectedDistricts.get(i));
         temp.project(app);

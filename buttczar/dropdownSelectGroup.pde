@@ -15,6 +15,7 @@ import controlP5.*;
 class DropdownSelectGroup {
     int selected_x_idx, selected_y_idx, selected_z_idx, selected_state_idx;
     DropdownList ddx, ddy, ddz, dds; // DropDowns for X, Y, Z, and State
+    CheckBox coal_chkbx;
     String[] state_names;
     PImage circles_label_img;
 
@@ -47,6 +48,11 @@ class DropdownSelectGroup {
             dds.addItem(state_names[i], i);
         }
         customizeDropdown(dds);
+        coal_chkbx = cp5.addCheckBox("coal_toggle")
+            .setSize(ITEM_HEIGHT, ITEM_HEIGHT)
+            .setColorLabel(color(0))
+            .addItem("Only Coal Producers", 0);
+
         TOTAL_WIDTH = 4*SINGLE_SELECT_WIDTH + 4*LABEL_WIDTH + 3*PADDING;
         circles_label_img = loadImage("../img/concentric_circles.png");
 
@@ -63,8 +69,10 @@ class DropdownSelectGroup {
         float y_center = y + (h/2);
         float dd_y_pos = y_center + (float(ITEM_HEIGHT)/2);
         float x_begin = (float(width)/2) - (TOTAL_WIDTH/2);
-        float dd_begin = x_begin + LABEL_WIDTH;
         x_begin = x_begin < 0 ? 0 : x_begin;
+        x_begin = 70;
+        coal_chkbx.setPosition(x_begin - 20, dd_y_pos - ITEM_HEIGHT);
+        float dd_begin = x_begin + LABEL_WIDTH;
         int item_width = SINGLE_SELECT_WIDTH + PADDING + LABEL_WIDTH;
         dds.setPosition(dd_begin + 0*item_width, dd_y_pos);
         ddx.setPosition(dd_begin + 1*item_width, dd_y_pos);
