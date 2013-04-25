@@ -32,7 +32,7 @@ class VizController {
                                              districts.stateNames);
     initColors();
     graph = new Graph(GRAPH_X,GRAPH_Y,GRAPH_W,GRAPH_H);
-    map = new IndiaMap(stateColors, a);
+    map = new IndiaMap(stateColors, a, districts.districts);
     old_selected_districts = new ArrayList();
     new_selected_districts = new ArrayList();
     map.draw();
