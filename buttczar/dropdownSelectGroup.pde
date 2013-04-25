@@ -90,13 +90,14 @@ class DropdownSelectGroup {
               y_center - float(circles_label_img.height)/2);
         popStyle();
         helpButton.setHeight(ITEM_HEIGHT);
-        helpButton.setPosition(dd_begin + 4*item_width, dd_y_pos - ITEM_HEIGHT - 1);
+        helpButton.setPosition(dd_begin + 4*item_width,
+            dd_y_pos - ITEM_HEIGHT - 1);
         if(helpButton.isPressed()){
           helpButton.setOn();
         }
 
         if(helpButton.isOn()){
-          drawHelpWindow(dd_begin+4*item_width, y_center + 40);
+          drawHelpWindow(dd_begin+4*item_width, y_center + 20);
         }
     }
 
