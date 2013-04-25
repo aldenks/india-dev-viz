@@ -25,7 +25,7 @@ class IndiaMap {
     boundary = new BoundingBox(48, 105, -2, 15); 
     boundary = new BoundingBox(44, 101, 2, 19); 
     allStates   = new Polygons(boundary, dataPath("shapes/states.shp"));
-    allStates.setLocalSimplificationThreshold(.01);
+    allStates.setLocalSimplificationThreshold(0.1);
     districts = new Polygons(boundary, dataPath("shapes/districts.shp"));
     districts.setLocalSimplificationThreshold(0.1);
     districtsToHighlight = districts.getPolygonsWithId("DISTRICT_I");
@@ -71,6 +71,7 @@ class IndiaMap {
     Polygons temp;
     //allStates.project(app);
 
+    stroke(50);
     for (int i = 0; i < states.length; i++) {
       fill(colors[i]);
       temp = states[i];
@@ -87,12 +88,16 @@ class IndiaMap {
       noFill();
     }*/
 
+    strokeWeight(.25);
     fill(color(0, 43, 54));
+    stroke(200);
     for (int i = 0; i < selectedDistricts.size(); i++) {
       temp = idToDistrict[(Integer)selectedDistricts.get(i)];
       temp.project(app);
     }
     noFill();
+    stroke(0);
+    strokeWeight(1);
 
 
     currentMap = get(765, 110, 495, 585);
