@@ -41,10 +41,9 @@ class VizController {
     String selected_state = dropdowns.selectedStateName();
 
     if(x_column_idx != prev_x_col_idx || y_column_idx != prev_y_col_idx ||
-        z_column_idx != prev_z_col_idx || prev_state != selected_state){
-
+       z_column_idx != prev_z_col_idx || prev_state != selected_state){
       String[][] selectedData = districts.getColumnsForState(x_column_idx,
-                             y_column_idx, z_column_idx, selected_state);
+          y_column_idx, z_column_idx, selected_state);
       graph.setVariables(selectedData);
     }
     graph.draw();
@@ -52,45 +51,24 @@ class VizController {
 
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
     
-    /*old_selected_districts = new_selected_districts;
     new_selected_districts = graph.getSelectedDistrictNames();
-    Boolean districtsEqual = true;
-    if (old_selected_districts.size() == new_selected_districts.size()) {
-      for (int i = 0; i < old_selected_districts.size(); i++) {
-        if (old_selected_districts.get(i) != new_selected_districts.get(i)) {
-          districtsEqual = false;
-        }
-      }
-    }
-    else {
-      districtsEqual = false;
-    }
-
-    if (!districtsEqual) {
-      println("changed");
+    if (old_selected_districts.equals(new_selected_districts)) {
       map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
       map.draw();
     }
     else {
       map.drawImage();
-    }*/
-
-    ArrayList selected_districts = graph.getSelectedDistrictNames();
-    if (selected_districts.size() != 0) {
-      selected_districts = districts.getIDsFromNames(selected_districts);
-      map.updateSelectedDistricts(selected_districts);
     }
-    else {
-      selected_districts = new ArrayList();
-    } 
-    map.updateSelectedDistricts(selected_districts);
-    map.draw();
+
+    old_selected_districts.clear();
+    for (int i = 0; i < new_selected_districts.size(); i++) {
+      old_selected_districts.add(new_selected_districts.get(i));
+    }
 
     prev_x_col_idx = x_column_idx;
     prev_y_col_idx = y_column_idx;
     prev_z_col_idx = z_column_idx;
     prev_state     = selected_state;
-
   }
 
   void mousePressed() { graph.mousePressed(); }

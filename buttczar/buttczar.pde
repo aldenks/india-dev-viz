@@ -6,7 +6,6 @@ VizController vController;
 ControlP5 cp5;
 
 void setup() {
-  frameRate(5);
   smooth();
   size(1300, 800);
   cp5 = new ControlP5(this);

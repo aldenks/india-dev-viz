@@ -76,7 +76,7 @@ class IndiaMap {
   }
 
   public void drawImage() {
-    image(currentMap, 765, 100);
+    image(currentMap, 765, 110);
   }
 
 }
