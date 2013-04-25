@@ -118,19 +118,20 @@ class DropdownSelectGroup {
 
     // x y for where to draw helpbutton
     void drawHelpButton(float x, float y){
-      String[] help = new String[5];
+      String[] help = new String[6];
       help[0] = "Click and drag to select districts (data points).";
       help[1] = "Selected districts will appear on map.";
       help[2] = "Click again to deselect districts.";
       help[3] = "Select variables to view in dropdowns.";
-      help[4] = " ";
+      help[4] = "CAUTION: selecting a large # of districts will";
+      help[5] = "take a significant amount of time to render!";
       float rect_width = textWidth(help[0]);
       float line_height = 15;
       float x_padding = 10;
       float y_padding = 5;
       fill(#002b36);
       rect(x - rect_width/2,y,rect_width+2*x_padding,
-          line_height*5 + 2*y_padding);
+          line_height*6 + 2*y_padding);
       textAlign(LEFT,BOTTOM);
       fill(#FFFFFF);
       text(help[0], x+x_padding - rect_width/2, y + line_height + y_padding);
@@ -138,5 +139,6 @@ class DropdownSelectGroup {
       text(help[2], x+x_padding - rect_width/2, y + line_height*3 + y_padding);
       text(help[3], x+x_padding - rect_width/2, y + line_height*4 + y_padding);
       text(help[4], x+x_padding - rect_width/2, y + line_height*5 + y_padding);
+      text(help[5], x+x_padding - rect_width/2, y + line_height*6 + y_padding);
     }
 }
