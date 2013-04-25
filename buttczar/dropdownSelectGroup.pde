@@ -98,7 +98,7 @@ class DropdownSelectGroup {
 
         if(helpButton.isOn()){
           drawHelpWindow(dd_begin+4*item_width, y_center + 20);
-        }
+        }  
     }
 
     int selectedXIndex() { return selected_x_idx; }

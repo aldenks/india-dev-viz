@@ -40,6 +40,9 @@ class Graph {
     line(plotx,ploty+ploth,plotx+plotw, ploty+ploth);
 
     // axis labels
+    pushStyle();
+    PFont f = createFont("Arial-BoldMT", 14);
+    textFont(f,14);
     fill(color(0,0,0));
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
@@ -50,6 +53,7 @@ class Graph {
     rotate(-HALF_PI);
     text(ly, x-50, y - axis_w-40);
     popMatrix();
+    popStyle();
 
     // y value labels
     int num_y_labels = 5;
