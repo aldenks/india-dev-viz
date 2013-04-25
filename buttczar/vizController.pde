@@ -47,14 +47,15 @@ class VizController {
     if(x_column_idx != prev_x_col_idx || y_column_idx != prev_y_col_idx ||
        z_column_idx != prev_z_col_idx || prev_state != selected_state){
       String[][] selectedData = districts.getColumnsForState(x_column_idx,
-          y_column_idx, z_column_idx, selected_state);
+          y_column_idx, z_column_idx, selected_state, true);
+      //TODO add actual coal filter to last boolean
       graph.setVariables(selectedData);
     }
     graph.draw();
     // getSelectedDistrictNames() must be called after graph.draw()
 
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
-    
+
     new_selected_districts = graph.getSelectedDistrictNames();
     if (old_selected_districts.equals(new_selected_districts)) {
       map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
