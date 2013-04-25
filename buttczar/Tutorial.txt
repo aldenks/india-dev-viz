@@ -1,9 +1,16 @@
 Loading Data:
 
+The data paths are hardcoded. 
+The CSVs need to be in a data directory in the sketchfolder: 
+-buttczar/data/states.csv
+-buttczar/data/districts.csv
+
+The shapefiles all need to be a shapes directory inside the data directory:
+-buttczar/data/shapes
 
 How to Use Program:
 
-	You can use the drop-down menus at the top to choose which variables to look it. They will show up on the x-axis, y-axis, or in how big the circles are. You can also filter by state with a drop-down. There is a coal button that toggles between all districts and only districts that produce coal.
+You can use the drop-down menus at the top to choose which variables to look at. They will show up on the x-axis, y-axis, or in how big the circles are. You can also filter by state with a drop-down. There is a coal button that toggles between all districts and only districts that produce coal.
 
 Hovering over a circle generates a tooltip, which displays the district and state name, and values of the chosen variables.
 
@@ -13,4 +20,4 @@ If any of this is unclear, you can click on the HELP button for instructions.
 
 Thing That Doesn't Work Well:
 
-	If you select hundreds of districts, it has to render millions of points and it will be slow. :(
+If you select hundreds of districts, it has to render millions of points and it will be slow. :(
