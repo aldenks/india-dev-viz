@@ -54,12 +54,7 @@ class VizController {
     // getSelectedDistrictNames() must be called after graph.draw()
 
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
-<<<<<<< HEAD
     
-=======
-
-    /*old_selected_districts = new_selected_districts;
->>>>>>> be5d23d9409ad6856408815e5a6fee62c090a875
     new_selected_districts = graph.getSelectedDistrictNames();
     if (old_selected_districts.equals(new_selected_districts)) {
       map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
@@ -73,14 +68,6 @@ class VizController {
     for (int i = 0; i < new_selected_districts.size(); i++) {
       old_selected_districts.add(new_selected_districts.get(i));
     }
-<<<<<<< HEAD
-=======
-    else {
-      selected_districts = new ArrayList();
-    }
-    map.updateSelectedDistricts(selected_districts);
-    map.draw();
->>>>>>> be5d23d9409ad6856408815e5a6fee62c090a875
 
     prev_x_col_idx = x_column_idx;
     prev_y_col_idx = y_column_idx;
