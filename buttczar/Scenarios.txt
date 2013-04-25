@@ -1,11 +1,11 @@
-	Interesting Findings!
+Interesting Findings!
 
-•	The worker rate in districts appears to be almost entirely dependent 	on the female worker rate. The correlation between female worker rate 	and total worker rate seems much higher than the correlation between 	male worker rate and total worker rate. 
+•	The worker rate in districts appears to be almost entirely dependent 	on the female worker rate. The correlation between female worker rate and total worker rate seems much higher than the correlation between male worker rate and total worker rate. 
 
-•	There is an apparent negative correlation between literacy and the 	percentage of the population that are cultivators.
+•	There is an apparent negative correlation between literacy and the percentage of the population that are cultivators.
 
 •	All of the very urban districts have high literacy rates.
 
-•	The district Kerala has very high literacy rates.
+•	The state Kerala has very high literacy rates.
 
-•	Many of the districts of Uttar Pradesh have some of the lowest worker 	rates.
+•	Many of the districts of Uttar Pradesh have some of the lowest worker rates.
