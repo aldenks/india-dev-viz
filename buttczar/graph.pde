@@ -17,9 +17,13 @@ class Graph {
   ArrayList selected_districts;
   float drag_start_x, drag_start_y;
 
+  HashMap<String, Integer> stateColors;
+
   //take in 2d string array
 
-  public Graph(float _x, float _y, float _w, float _h) {
+  public Graph(float _x, float _y, float _w, float _h,
+      HashMap<String, Integer> _stateColors ) {
+    stateColors = _stateColors;
     axis_w = 70;
     max_radius = 25;
     min_radius = 5;
@@ -40,7 +44,7 @@ class Graph {
     textAlign(CENTER, BASELINE);
     text(lx, x+(plotw/2.0)+axis_w, y+ploth+axis_w-6);
     textAlign(CENTER, CENTER);
-    
+
     pushMatrix();
     translate(x,y+(ploth/2.0));
     rotate(-HALF_PI);
@@ -88,6 +92,28 @@ class Graph {
     noFill();
     xlocs = xLocations();
     for (int i = 0; i < xlocs.length; i++) {
+      String state_name = split(names[i],", ")[1];
+      color state_color = (Integer)stateColors.get(state_name);
+      //println(state_name);
+      strokeWeight(2);
+      fill(state_color);
+
+      int alpha   = (state_color >> 24) & 0xFF;
+      int red     = (state_color >> 16) & 0xFF;
+      int green   = (state_color >> 8)  & 0xFF;
+      int blue    = state_color         & 0xFF;
+
+      int shift_color = 0;
+
+      alpha = 255;
+      red   = red   - shift_color;
+      green = green - shift_color;
+      blue  = blue  - shift_color;
+
+      state_color = (alpha << 24) | (red << 16) | (green << 8) | blue;
+
+      stroke(state_color);
+
       ellipse(xlocs[i], ylocs[i], zrad[i], zrad[i]);
       dist = intersectionDist(i);
       if (dist < smallestDist) {
@@ -99,6 +125,8 @@ class Graph {
         selected_districts.add(districtNames[i]);
       }
     }
+
+    stroke(0, 0, 0, 150);
 
     if (intersectionID != -1) {
       drawToolTip(intersectionID);
@@ -151,24 +179,48 @@ class Graph {
     Arrays.sort(allLengths);
     strLen = allLengths[3];
     fill(#002b36);
-    if (mouseY < y+30) {
-      float addX = 10;
-      rect(mouseX + addX, mouseY, strLen + 2*xPadding, (15)*4);
-      textAlign(LEFT,BOTTOM);
-      fill(#FFFFFF);
-      text(names[index],mouseX + xPadding + addX,mouseY + 15);
-      text(xName, mouseX + xPadding + addX,mouseY + 15*2);
-      text(yName, mouseX + xPadding + addX,mouseY + 15*3);
-      text(zName, mouseX + xPadding + addX,mouseY+ 15*4);
+    if(mouseX > (x+w)/2) {
+      float text_width = strLen;
+      if (mouseY < y+30) {
+        float addX = 10;
+        rect(mouseX + addX - text_width, mouseY, strLen + 2*xPadding, (15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding + addX - text_width,mouseY + 15);
+        text(xName, mouseX + xPadding + addX - text_width,mouseY + 15*2);
+        text(yName, mouseX + xPadding + addX - text_width,mouseY + 15*3);
+        text(zName, mouseX + xPadding + addX - text_width,mouseY+ 15*4);
+      }
+      else {
+        rect(mouseX - text_width, mouseY, strLen + 2*xPadding, (-15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding - text_width,mouseY - 15*3);
+        text(xName, mouseX + xPadding - text_width,mouseY - 15*2);
+        text(yName, mouseX + xPadding - text_width,mouseY - 15);
+        text(zName, mouseX + xPadding - text_width,mouseY);
+      }
     }
     else {
-      rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
-      textAlign(LEFT,BOTTOM);
-      fill(#FFFFFF);
-      text(names[index],mouseX + xPadding,mouseY - 15*3);
-      text(xName, mouseX + xPadding,mouseY - 15*2);
-      text(yName, mouseX + xPadding,mouseY - 15);
-      text(zName, mouseX + xPadding,mouseY);
+      if (mouseY < y+30) {
+        float addX = 10;
+        rect(mouseX + addX, mouseY, strLen + 2*xPadding, (15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding + addX,mouseY + 15);
+        text(xName, mouseX + xPadding + addX,mouseY + 15*2);
+        text(yName, mouseX + xPadding + addX,mouseY + 15*3);
+        text(zName, mouseX + xPadding + addX,mouseY+ 15*4);
+      }
+      else {
+        rect(mouseX, mouseY, strLen + 2*xPadding, (-15)*4);
+        textAlign(LEFT,BOTTOM);
+        fill(#FFFFFF);
+        text(names[index],mouseX + xPadding,mouseY - 15*3);
+        text(xName, mouseX + xPadding,mouseY - 15*2);
+        text(yName, mouseX + xPadding,mouseY - 15);
+        text(zName, mouseX + xPadding,mouseY);
+      }
     }
     textAlign(CENTER,CENTER); //KEEP THIS HERE
     noFill();
