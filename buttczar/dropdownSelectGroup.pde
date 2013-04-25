@@ -63,7 +63,7 @@ class DropdownSelectGroup {
 
     void draw(float x, float y, float w, float h) {
         if (first_run) {
-            ddx.setIndex(0); ddy.setIndex(1); ddz.setIndex(2); dds.setIndex(0);
+            ddx.setIndex(17); ddy.setIndex(6); ddz.setIndex(3); dds.setIndex(0);
             first_run = false;
         }
         pushStyle();
