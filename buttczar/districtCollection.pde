@@ -10,11 +10,12 @@ class DistrictCollection {
   String values[][];
   public final String variableNames[] = {"Opencast Coal Output",
     "Below Ground Coal Output", "Total Area", "Total Population",
-    "Male Population", "Female Population", "Total Literates",
-    "Male Literates", "Female Literates", "Total Workers", "Male Workers",
-    "Female Workers", "Total Cultivators", "Total Agricultural Laborers",
-    "Total Non-workers", "Rural Total Population", "Rural Total Literates",
-    "Urban Total Population", "Urban Total Literates"};
+    "Males / Tot. Pop.", "Females / Tot. Pop.", "Literacy Rate",
+    "Male Literacy Rate", "Female Literacy Rate", "Workers / Tot. Pop.",
+    "Male Workers / Male Pop.", "Female Workers / Female Pop.",
+    "Cultivators / Tot. Pop", "Agricultural Workers / Tot. Pop.",
+    "Non-Workers / Tot. Pop.", "Rural Pop. / Tot. Population", 
+    "Rural Literacy Rate", "Urban Pop. / Tot. Pop.", "Urban Literacy Rate"};
   public final String stateNames[] = { "Jammu & Kashmir", "Himachal Pradesh",
     "Punjab", "Uttranchal", "Haryana", "Chandigarh", "Uttar Pradesh",
     "Rajasthan", "Arunachal Pradesh", "Delhi", "Sikkim", "Assam", "Bihar",
