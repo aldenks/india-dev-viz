@@ -1,0 +1,16 @@
+Loading Data:
+
+
+How to Use Program:
+
+	You can use the drop-down menus at the top to choose which variables to look it. They will show up on the x-axis, y-axis, or in how big the circles are. You can also filter by state with a drop-down. There is a coal button that toggles between all districts and only districts that produce coal.
+
+Hovering over a circle generates a tooltip, which displays the district and state name, and values of the chosen variables.
+
+If you click and drag over circles, the districts corresponding to those circles will turn black on the map. Clicking on the graph again de-selects every district. 
+
+If any of this is unclear, you can click on the HELP button for instructions.
+
+Thing That Doesn't Work Well:
+
+	If you select hundreds of districts, it has to render millions of points and it will be slow. :(
