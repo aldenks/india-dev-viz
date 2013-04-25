@@ -76,19 +76,6 @@ class IndiaMap {
       temp.project(app);
     }
 
-<<<<<<< HEAD
-=======
-    //districts.project(app);
-    /*if (selectedDistricts.size() != 0) {
-      fill(0, 43, 54, 250);
-      for (int i = 0; i < selectedDistricts.size(); i++) {
-        temp = districtsToHighlight.get((Integer)selectedDistricts.get(i));
-        temp.project(app);
-      }
-      noFill();
-    }*/
-
->>>>>>> 5f3429c305f70a4f60e243ec4de4267abdc6aae7
     strokeWeight(.25);
     fill(color(0, 43, 54));
     stroke(200);
