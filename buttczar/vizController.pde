@@ -59,13 +59,13 @@ class VizController {
     dropdowns.draw(0, 10, width, SELECTION_GUI_HEIGHT);
 
     new_selected_districts = graph.getSelectedDistrictNames();
-//    if (old_selected_districts.equals(new_selected_districts)) {
-//      map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
-//      map.draw();
-//    }
-//    else {
-//      map.drawImage();
-//    }
+    if (old_selected_districts.equals(new_selected_districts)) {
+      map.updateSelectedDistricts(districts.getIDsFromNames(new_selected_districts));
+      map.draw();
+    }
+    else {
+      map.drawImage();
+    }
 
     old_selected_districts.clear();
     for (int i = 0; i < new_selected_districts.size(); i++) {
