@@ -98,7 +98,6 @@ class Graph {
     for (int i = 0; i < xlocs.length; i++) {
       String state_name = split(names[i],", ")[1];
       color state_color = (Integer)stateColors.get(state_name);
-      //println(state_name);
       strokeWeight(2);
       fill(state_color);
 

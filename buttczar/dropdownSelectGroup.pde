@@ -30,7 +30,8 @@ class DropdownSelectGroup {
 
     public DropdownSelectGroup(ControlP5 cp5, String[] column_names,
                                String[] _state_names) {
-        String[] _all = { "All States" };
+        String[] _all = { "All States", "Mineral-Rich States" };
+        _state_names = sort(_state_names);
         state_names = concat(_all, _state_names);
         ddx = cp5.addDropdownList("X");
         ddy = cp5.addDropdownList("Y");

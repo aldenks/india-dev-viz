@@ -165,10 +165,14 @@ class DistrictCollection {
     Iterator iter = districts.entrySet().iterator();
     int i = 1;
     boolean all_states = state.equals("All States");
+    boolean mineralRich = state.equals("Mineral-Rich States");
     while (iter.hasNext()) {
       Map.Entry x = (Map.Entry)iter.next();
       District d = (District)x.getValue();
-      if (all_states || state.equals(d.state)) {
+      if (all_states || state.equals(d.state) || 
+         (mineralRich && (d.state.equals("Jharkhand") || d.state.equals("Orissa") 
+                      || d.state.equals("Chhattisgarh")  || d.state.equals("Andhra Pradesh") 
+                      || d.state.equals("West Bengal") || d.state.equals("Bihar")))) {
         if(!filter_coal || (float(d.data[0]) != 0 || float(d.data[1]) != 0)){
           columns[0][i] = (String)x.getKey();
           columns[1][i] = d.data[var1];

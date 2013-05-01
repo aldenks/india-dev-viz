@@ -6,6 +6,7 @@ file.each_line do |line|
 end
 states.uniq! # remove duplicates
 states.shift # remove the column header
+states.sort!
 states.each do |s|
   print '"' + s + '", '
 end
