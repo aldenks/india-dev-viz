@@ -31,7 +31,7 @@ class Graph {
     plotx = x+axis_w; ploty = y;
     ploth = h-axis_w; plotw = w-axis_w;
     selected_districts = new ArrayList();
-    formatter = new DecimalFormat("#,##0.0");
+    formatter = new DecimalFormat("#,##0.000");
   }
 
   void draw() {
