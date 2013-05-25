@@ -16,12 +16,11 @@ Included is a Mac OSX version of the application.
 
 + [http://github.com/aldenks](http://github.com/aldenks)
 
-**Sean Hirata**
-
 **Nate Tenczar**
 
 + [http://github.com/ntenczar](http://github.com/ntenczar)
 
+**Sean Hirata**
 
 Copyright and License
 -----------------------------------------------------------------------------
