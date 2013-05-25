@@ -21,6 +21,9 @@ Included is a Mac OSX version of the application.
 **Nate Tenczar**
 
 + [http://github.com/ntenczar](http://github.com/ntenczar)
+
+
+Copyright and License
 -----------------------------------------------------------------------------
 
 Copyright 2013 William Butt
